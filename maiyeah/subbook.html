@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物流程_买嘢网-香港.买YEAH网！</title>
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+		<!--<link rel="icon" href="img/favcion.gif" type="image/gif"/>-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+		<style type="text/css">
+			a{color:#000;}
+			.suborder {
+				width: 1010px;
+				height: 725px;
+				margin: 0 auto
+			}
+			
+			.subhead {
+				height: 80px;
+				line-height: 80px;
+				text-align: center;
+			}
+			
+			.ordernum {
+				color: #d00;
+			}
+			.orderbox {
+				height: 540px;
+				border: 1px solid #e3e3e3;
+			}
+			
+			.order-pay {
+				height: 68px;
+				line-height:68px;
+				font-size: 18px;
+				font-weight: 900;
+				text-align: center;
+			}
+			
+			.ordershou {
+				font-size: 22px;
+				color: #d00;
+			}
+			.choice{
+				height:36px;
+				margin:32px 0 20px;
+				text-align:center;
+				color:#ff9500;
+			}
+			.bank{padding-left:85px;}
+			.bankrow{height:49px;}
+			.bankrow img{margin-right:40px;}
+			.payfor{margin-top:55px;height:40px;line-height:40px;}
+			#orderend{width:150px;height:40px;background:#98BD39;color:#fff;font-size:16px;border:0;border-radius:8px;margin-left:225px;margin-right:125px;}
+			#elsepay{width:98px;height:30px;background:#f60;}
+			.tiaozh{height:50px;margin-bottom:50px;text-align:center;line-height:50px;;}
+			
+			.tiaozh a:hover{color:#ff9500;}
+		</style>
+
+	</head>
+	<body>
+		<div class="header2">
+			<div class="header2-box">
+				<div class="gather">
+					<p class="welcome left">
+						欢迎光临香港•买Yeah网！
+					</p>
+					<div class="login left">
+						<a href="login.html">登录</a>
+					</div>
+					<div class="huo left">或</div>
+					<div class="register left">
+						<a href="login.html">注册</a>
+					</div>
+					<div class="hadlogin">
+						<span>您好，</span>
+						<a href="" class="haduser"></a>
+						<a href="exitwindow.html">退出</a>&nbsp;&nbsp;|&nbsp;
+						<a href="yhzx.html">我的订单</a>
+
+					</div>
+				</div>
+				<ul class="assist">
+					<li><a href="#">帮助中心</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">预约购买</a></li>
+					<li><a href="#">网站导航</a></li>
+					<li><a href="#">繁體版</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--搜索条-------------------------------->
+		<div class="search">
+			<div class="search-box">
+				<div class="logo left">
+					<img src="img/logo.png">
+				</div>
+				<div class="sear-box left">
+					<form action="" method="get" name="">
+						<input id="sear" type="text" value="请输入你要查找的商品" />
+						<button id="search">搜索</button>
+					</form>
+					<ul class="search-nav">
+						<li><a href="#">悦诗风吟</a></li>
+						<li><a href="#">碧柔</a></li>
+						<li><a href="#">SNP</a></li>
+						<li><a href="#">水宝宝</a></li>
+						<li><a href="#">高丝</a></li>
+						<li><a href="#">乐高</a></li>
+					</ul>
+				</div>
+				<div class="purchase-car left">
+					<a href="purchasecar.html">购物车(0)件</a>
+				</div>
+			</div>
+		</div>
+		<!--导航----------------------------------->
+		<div class="nav">
+			<ul class="nav-box">
+				<li class="fir spe"><a href="index.html">首页</a></li>
+				<li>
+					<a href=""><img src="img/nav/7.png"></a>
+				</li>
+				<li class="spe spe2">
+					<span>名品专场
+					<div class="mingpin">
+					<a class="yuele" href="">悦诗风吟</a>
+					<a class="yuele" href="">乐高</a>
+					</div>
+					</span>
+
+				</li>
+				<li><a href="">美妆商城</a></li>
+				<li><a href="">亲子母婴</a></li>
+				<li><a href="">关于我们</a></li>
+				<li class="nav-photo nav-photo1">
+					<a href="#">
+						<img src="img/nav/nav1.png"></a>
+				</li>
+				<li class="nav-photo nav-photo2">
+					<a href="#">
+						<img src="img/nav/nav2.png"></a>
+				</li>
+				<li class="nav-photo nav-photo3">
+					<a href="#">
+						<img src="img/nav/nav3.png"></a>
+				</li>
+
+			</ul>
+		</div>
+
+		<div class="suborder">
+			<div class="subhead">
+				<b>感谢您在本店购物！您的订单已提交成功，请记住您的订单号:
+				<span class="ordernum">
+					2016012787671
+				</span></b>
+			</div>
+			<div class="orderbox">
+				<p class="order-pay">订单金额
+					<span class="ordershou">
+						￥0.00元</span>
+				</p>
+				<p class="choice">请选择支付银行</p>
+				<div class="bank">
+					<div class="bankrow">
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank1.png"/>	
+					</label>
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank2.png"/>	
+					</label>
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank3.png"/>	
+					</label>
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank4.png"/>	
+					</label>
+					</div>
+					<div class="bankrow">
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank5.png"/>	
+					</label>
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank6.png"/>	
+					</label>
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank7.png"/>	
+					</label>
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank8.png"/>	
+					</label>
+					</div>
+					<div class="bankrow">
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank9.png"/>	
+					</label>
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank10.png"/>	
+					</label>
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank11.png"/>	
+					</label>
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank12.png"/>	
+					</label>
+					</div>
+					<div class="bankrow">
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank13.png"/>	
+					</label>
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank14.png"/>	
+					</label>
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank15.png"/>	
+					</label>
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank16.png"/>	
+					</label>
+					</div>
+					<div class="bankrow">
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank17.png"/>	
+					</label>
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank18.png"/>	
+					</label>
+					<label>
+					<input type="radio" name="pay"/>
+					<img src="img/book/bank19.png"/>	
+					</label>
+					</div>
+					<div class="payfor">
+					<input type="button" id="orderend" value="确认支付"/>
+					<input type="button" id="elsepay" value="用支付宝支付"/>
+					</div>
+					
+					
+				</div>
+
+			</div>
+			<div class="tiaozh">
+				您可以
+				<a href="index.html">
+					返回首页
+				</a> 或去
+				<a href="yhzx.html">用户中心</a>
+			
+			</div>
+		</div>
+
+		<!--底部拓展--------------------->
+		<div class="expand">
+			<div class="expandbox">
+				<div class="exleft left">
+					<img src="img/expand/1.png" alt="" />
+				</div>
+				<ul class="expandcon left">
+					<li class="exhead">
+						买Yeah网承诺
+					</li>
+					<li class="exbody">
+						<a href="">
+						100%海外原装
+					</a>
+					</li>
+					<li class="exbody">
+						<a href="">
+						7天包退换
+					</a>
+					</li>
+					<li class="exbody">
+						<a href="">
+						绿色流程
+					</a>
+					</li>
+				</ul>
+				<ul class="expandcon left">
+					<li class="exhead">
+						物流配送
+					</li>
+					<li class="exbody">
+						<a href="">
+						香港直邮
+					</a>
+					</li>
+					<li class="exbody">
+						<a href="">
+						保税区发货
+					</a>
+					</li>
+				</ul>
+				<ul class="expandcon left">
+					<li class="exhead">
+						新手指南
+					</li>
+					<li class="exbody">
+						<a href="">
+						购物流程
+					</a>
+					</li>
+					<li class="exbody">
+						<a href="">
+						支付方式
+					</a>
+					</li>
+				</ul>
+				<ul class="expandcon left">
+					<li class="exhead">
+						客服中心
+					</li>
+					<li class="exbody">
+						<a href="">
+						常见问题
+					</a>
+					</li>
+					<li class="exbody">
+						<a href="">
+						退换货细则
+					</a>
+					</li>
+					<li class="exbody">
+						<a href="">
+						找回密码
+					</a>
+					</li>
+				</ul>
+				<ul class="expandcon left">
+					<li class="exhead">
+						ceo邮箱
+					</li>
+					<li class="exbody">
+						<a href="">
+						ceo@maiyeah.com
+					</a>
+					</li>
+				</ul>
+
+				<div class="exwei">
+					<img src="img/expand/1.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<!--版权----------------------------------->
+		<div class="copyright">
+			<div class="copybox">
+
+				<div class="copynav">
+					<a class="copyspe" href="">
+					关于买Yeah
+				</a>
+					<a href="">
+					使用条款
+				</a>
+					<a href="">
+					批发服务
+				</a>
+					<a href="">
+					招商合作
+				</a>
+					<a href="">
+					人才招聘
+				</a>
+					<a href="">
+					联系我们
+				</a>
+					<a href="">
+					物流查询
+				</a>
+					<div class="copysina">
+						<a href>
+							<img src="img/expand/2.png" alt="" />
+						</a>
+					</div>
+				</div>
+
+				<div class="copycon">
+					© 2005-2016 maiyeah.com 版权所有，并保留所有权利。<a href="">粤ICP备13028653号-2</a>
+					<a href="">	快递查询</a>
+				</div>
+				<div class="copypic">
+					<img src="img/expand/22.jpg" alt="" />
+					<img src="img/expand/23.jpg" alt="" />
+					<img src="img/expand/24.jpg" alt="" />
+					<img src="img/expand/25.jpg" alt="" />
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript">
+	showuser();
+	var pricestr=parseInt(getCookie("goodprice").substring(1));
+	var countstr=getCookie("goodcount");
+	
+	var totalaccount=pricestr*countstr+33;
+	totalaccount=totalaccount.toFixed(2);
+	var ordershou=getClassName("ordershou");
+	ordershou[0].innerHTML="￥"+totalaccount+"元";
+
+	var pay=document.getElementsByName("pay");
+	var qdzf=document.getElementById("orderend");
+	var elsepay=document.getElementById("elsepay");
+	var marks=true;
+		qdzf.onclick=function(){
+			for(var i=0;i<pay.length;i++){
+				if(pay[i].checked==true){
+					alert("用户支付继续");
+					marks=false;
+				}
+			}
+			if(marks){
+				alert("请选择支付方式");
+			}
+		}
+		elsepay.onclick=function(){
+			alert("支付宝方式支付");
+			
+		}
+
+	</script>
+</html>

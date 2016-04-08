@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户中心_买嘢网-香港.买YEAH网！</title>
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+		<!--<link rel="icon" href="img/favcion.gif" type="image/gif"/>-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+	</head>
+	<body>
+<!------头部-------------------------->
+		<div class="header2">
+			<div class="header2-box">
+				<div class="gather">				
+					<p class="welcome left">
+						欢迎光临香港•买Yeah网！
+					</p>
+					<div class="login left">
+						<a href="login.html">登录</a>
+					</div>
+					<div class="huo left">或</div>
+					<div class="register left">
+						<a href="login.html">注册</a>
+					</div>
+					<!-已注册或一登陆-->
+					<div class="hadlogin">
+						<span>您好，</span>
+			<a href="" class="haduser"></a>
+			<a href="exitwindow.html">退出</a>
+			&nbsp;&nbsp;|&nbsp;
+			<a href="yhzx.html">我的订单</a>
+					
+					</div>
+				</div>
+				<ul class="assist">
+					<li><a href="#">帮助中心</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">预约购买</a></li>
+					<li><a href="#">网站导航</a></li>
+					<li><a href="#">繁體版</a></li>
+				</ul>
+			</div>
+		</div>
+<!--搜索条----------------------------------->		
+		<div class="search">
+			<div class="search-box">
+				<div class="logo left">
+					<img src="img/logo.png">
+				</div>
+				<div class="sear-box left">
+					<form action="" method="get" name="">
+						<input id="sear" type="text" value="请输入你要查找的商品" />
+						<button id="search">搜索</button>
+					</form>
+					<ul class="search-nav">
+						<li><a href="#">悦诗风吟</a></li>
+						<li><a href="#">碧柔</a></li>
+						<li><a href="#">SNP</a></li>
+						<li><a href="#">水宝宝</a></li>
+						<li><a href="#">高丝</a></li>
+						<li><a href="#">乐高</a></li>
+					</ul>
+				</div>
+				<div class="purchase-car left">
+						<a href="purchasecar.html">购物车(0)件</a>
+				</div>
+			</div>
+		</div>
+<!--导航------------------------------------->		
+		<div class="nav">
+			<ul class="nav-box">
+				<li class="fir spe"><a href="index.html">首页</a></li>
+				<li><a href=""><img src="img/nav/7.png"></a></li>
+				<li class="spe spe2">
+					<span>名品专场
+					<div class="mingpin">
+					<a class="yuele" href="">悦诗风吟</a>
+					<a class="yuele" href="">乐高</a>
+					</div>
+					</span>
+					
+				</li>
+				<li><a href="">美妆商城</a></li>
+				<li><a href="">亲子母婴</a></li>
+				<li><a href="">关于我们</a></li>
+				<li class="nav-photo nav-photo1"><a href="#">
+					<img src="img/nav/nav1.png"></a></li>
+				<li class="nav-photo nav-photo2"><a href="#">
+					<img src="img/nav/nav2.png"></a></li>
+				<li class="nav-photo nav-photo3"><a href="#">
+					<img src="img/nav/nav3.png"></a></li>
+			
+			</ul>
+		</div>
+
+<!--登录注册信息------------------------------>
+		<div class="message">
+<!------------------登录---------------------->
+			<div class="login-box">
+				<div class="login-title">
+				    <h3 class="login-tit">登录</h3>
+					<div class="fontit">已经注册，请在此登录</div>
+				</div>
+				<div class="login-con">
+				<form action="" method="get" class="form1">
+				<div class="hei1">
+					<span class="loginname left">用户名：</span>
+					<input type="text" id="login-user" class="inpcssstyle left"/>
+				</div>
+				<div class="hei2">
+					<span class="loginname left">密码：</span>
+					<input type="password" id="login-pass" class="inpcssstyle left"/>
+				</div>
+				<div class="hei3">
+					<label>
+						<input type="checkbox" id="check" />
+						请保存我这次的登录信息。
+					</label>
+				</div>
+				<div class="hei3">
+					<input type="button" id="loginbtn" class="left logsub"  value="登录"/>
+					<span class="left findpass">
+						<a href="">密码问题找回密码</a>
+					</span>
+				</div>
+				
+				</form>
+				<div class="partner">
+					<span class="loginmethod left">
+						使用合作网站
+					</span>
+					<a href="">
+					<img src="img/login/qq_login.png"/></a>
+					<a href="">
+					<img src="img/login/sina_login.png"/>
+					</a>
+				</div>
+				<div class="partner">
+					<span class="loginmethod left">
+						帐号登录
+					</span>
+					<a href="">
+					<img src="img/login/alipay_login.png"/>
+					</a>
+				</div>
+				</div>
+			</div>
+			
+<!-------------------注册----------------------->
+			<div class="regis-box">
+			<div class="login-title">
+				<h3 class="login-tit">免费注册</h3>
+				<div class="fontit">新用户？请在此注册</div>
+			</div>
+			<form action="" method="get" class="form2">
+				<div class="inpbox">
+					<div class="separate">
+						<span id="username_notice">
+						</span>
+					</div>
+				
+					<div class="regisuser">
+						<span class="loginname left">
+							<span>*</span>用户名：
+						</span>
+						<input type="text" id="yhm" class="inpcssstyle left"/>
+					</div>
+				</div>
+				<div class="inpbox">
+					<div class="separate">
+						<span id="email_notice">
+						</span>
+					</div>
+				
+					<div class="regisuser">
+						<span class="loginname left">
+							<span>*</span>email：
+						</span>
+			<input type="text" id="emails" class="inpcssstyle left"/>
+					</div>
+				</div>
+				<div class="inpbox">
+					<div class="separate">
+						<span id="password_notice">
+						</span>
+					</div>
+				
+					<div class="regisuser">
+						<span class="loginname left">
+							<span>*</span>密码：
+						</span>
+			<input type="password" id="passwd" class="inpcssstyle left"/>
+					</div>
+				</div>
+				<div class="inpbox">
+					<div class="separate">
+						<span id="confirm_notice">
+						</span>
+					</div>
+				
+					<div class="regisuser">
+						<span class="loginname left">
+							<span>*</span>确认密码：
+						</span>
+	<input type="password" id="confirm" class="inpcssstyle left"/>
+					</div>
+				</div>
+				<div class="inpbox">
+					<div class="separate"></div>
+					<div class="regisuser">
+						<span class="loginname left">
+							推荐暗号：
+						</span>
+						<input type="text" class="userrecom left"/>
+						<span class="left havenone">(没有可以不填)</span>
+					</div>
+				</div>
+				<div class="hei3">
+					<label>
+						<input type="checkbox" id="ifaccept" checked />
+						我已看过并接受
+						《<a href="" style="color:blue">用户协议</a>》
+					</label>
+				</div>
+				<div class="hei3">
+			<input type="button" class="logsub" id="regisbtn" value="注册"/>
+				</div>
+			
+			</form>
+			
+			</div>
+		</div>
+<!--登录状态信息-------------------------------->
+	<div class="login-success">
+		<p class="dangqian">当前位置：首页>系统显示</p>
+		<div class="dangqian2">
+			<p class="xtxx">系统信息</p>
+			<div class="loginstate">登录成功</div>
+			<div class="backpre">
+				<a href="index.html">返回上一页</a>
+			</div>
+			<div class="backpre">
+				<a href="">查看我的个人信息</a>
+			</div>
+		</div>
+	</div>
+	<div class="login-failed">
+		<p class="dangqian">当前位置：首页>系统显示</p>
+		<div class="dangqian2">
+			<p class="xtxx">系统信息</p>
+			<div class="loginstate">用户名或密码错误</div>
+			<div class="backpre">
+				
+			</div>
+			<div class="backpre">
+				<a href="login.html">重新登陆</a>
+			</div>
+		</div>
+	</div>
+<!--注册状态信息---------------------------------->
+	<div class="regis-success">
+		<p class="dangqian">当前位置：首页>系统显示</p>
+		<div class="dangqian2">
+			<p class="xtxx">系统信息</p>
+			<div class="loginstate" >
+			<span>用户名</span>
+			<span id="regisuser"></span>
+			<span>注册成功</span>
+			</div>
+			<div class="backpre">
+				<a href="index.html">返回上一页</a>
+			</div>
+			<div class="backpre">
+				<a href="">查看我的个人信息</a>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+	</div>
+<!--底部-->
+		<div class="expand">
+		<div class="expandbox">
+			<div class="exleft left">
+				<img src="img/expand/1.png" alt="" />
+			</div>
+			<ul class="expandcon left">
+				<li class="exhead">
+					买Yeah网承诺
+				</li>
+				<li class="exbody">
+					<a href="">
+						100%海外原装
+					</a>
+				</li>
+				<li class="exbody">
+					<a href="">
+						7天包退换
+					</a>
+				</li>
+				<li class="exbody">
+					<a href="">
+						绿色流程
+					</a>
+				</li>
+			</ul>
+			<ul class="expandcon left">
+				<li class="exhead">
+					物流配送
+				</li>
+				<li class="exbody">
+					<a href="">
+						香港直邮
+					</a>
+				</li>
+				<li class="exbody">
+					<a href="">
+						保税区发货
+					</a>
+				</li>
+			</ul>
+			<ul class="expandcon left">
+				<li class="exhead">
+					新手指南
+				</li>
+				<li class="exbody">
+					<a href="">
+						购物流程
+					</a>
+				</li>
+				<li class="exbody">
+					<a href="">
+						支付方式
+					</a>
+				</li>
+			</ul>
+			<ul class="expandcon left">
+				<li class="exhead">
+					客服中心
+				</li>
+				<li class="exbody">
+					<a href="">
+						常见问题
+					</a>
+				</li>
+				<li class="exbody">
+					<a href="">
+						退换货细则
+					</a>
+				</li>
+				<li class="exbody">
+					<a href="">
+						找回密码
+					</a>
+				</li>
+			</ul>
+			<ul class="expandcon left">
+				<li class="exhead">
+					ceo邮箱
+				</li>
+				<li class="exbody">
+					<a href="">
+						ceo@maiyeah.com
+					</a>
+				</li>
+			</ul>
+			
+			<div class="exwei">
+				<img src="img/expand/1.jpg" alt="" />
+			</div>
+		</div>	
+		</div>
+<!--版权----------------------------------------->		
+		<div class="copyright">
+		<div class="copybox">
+			
+			<div class="copynav">
+				<a class="copyspe" href="">
+					关于买Yeah
+				</a>
+				<a href="">
+					使用条款
+				</a>
+				<a href="">
+					批发服务
+				</a>
+				<a href="">
+					招商合作
+				</a>
+				<a href="">
+					人才招聘
+				</a>
+				<a href="">
+					联系我们
+				</a>
+				<a href="">
+					物流查询
+				</a>
+				<div class="copysina">
+					<a href>
+					<img src="img/expand/2.png" alt="" />
+					</a>					
+				</div>
+			</div>
+			
+			<div class="copycon">
+				© 2005-2016 maiyeah.com 版权所有，并保留所有权利。<a href="">粤ICP备13028653号-2</a> 
+			<a href="">	快递查询</a> 
+			</div>
+			<div class="copypic">
+				<img src="img/expand/22.jpg" alt="" />
+				<img src="img/expand/23.jpg" alt="" />
+				<img src="img/expand/24.jpg" alt="" />
+				<img src="img/expand/25.jpg" alt="" />
+			</div>
+
+
+
+
+		</div>
+		</div>
+
+	
+<!--模态弹出窗口-------------------------------->	
+	<div id="motaicover">
+		<div class="motaiwd">
+			<div id="alarm1"></div>
+			
+			<div class="alarm2">
+				<input type="button" id="alarmed" value="确定" />
+			</div>
+		</div>
+	</div>
+	</body>
+
+
+
+
+<script type="text/javascript">
+showuser();
+
+	/*名品专场---------------------------	*/
+	showandhide.mouhover({
+			act: $(".spe2 span"),
+			pos: $(".mingpin"),
+			actclass:"spehover"
+		});	
+	
+	/*用户登录--------------------------------------*/
+	var $loginuser,count,$data,times1,times,mark=true;
+	
+	clearTimeout(times1);
+	clearTimeout(times);
+	
+	$.getJSON("login.json",function(dat){
+			$data=dat.data;
+		});
+	count=getCookie("count")?parseInt(getCookie("count"))+1:1;
+	$("#login-user").focus(function(){
+		$("#login-pass").val("");
+		$("#login-user").val(getCookie("username"+count))
+	});
+	
+	$("#login-pass").focus(function(){
+		$loginuser=$("#login-user").val();
+		
+		for(var i=getCookie("count");i>0;i--){
+			if($loginuser==getCookie("username"+i)){
+				
+			$("#login-pass").val(getCookie("passwords"+i));
+			console.log($("#login-pass").val());return;
+			}
+		}
+	});
+	/*点击登录判断登录数据-----------------------*/
+	$("#loginbtn").click(function(){
+		$loginuser=$("#login-user").val();
+		$loginpass=$("#login-pass").val();
+	
+/*-------cookie中没有该用户名用来确定要不要存数据----------------------------------------用户不用重复的缓存数据------------------*/
+		var flag=true;    
+		for(var i=1;i<=getCookie("count");i++){
+			if(($loginuser==getCookie("username"+i))&&($loginpass==getCookie("passwords"+i))){
+				flag=false;
+			}
+			else if(($loginuser==getCookie("username"+i))&&($loginpass!=getCookie("passwords"+i))){
+				flag=false;
+				document.cookie="passwords"+i+"="+$loginpass+";expires="+d;			
+			}
+		}
+		if($("#check")[0].checked==true&&flag){
+			var d=new Date();
+			d.setTime(d.getTime()+10*24*3600*1000);
+		
+			document.cookie="username"+count+"="+$loginuser+";expires="+d;		
+			document.cookie="passwords"+count+"="+$loginpass+";expires="+d;
+			document.cookie="count="+count+";expires="+d;
+			count++;
+			
+		}
+		
+		
+			
+	for(var k=0;k<$data.length;k++){
+	
+		if(($data[k].name==$loginuser)&&($data[k].pass==$loginpass)){
+		$(".message").css("display","none");	
+		$(".login-success").css("display","block");
+		$(".message").css("display","none")
+		
+		document.cookie="success="+$loginuser;
+		
+		$(".hadlogin").css("display","block");
+	$(".haduser")[0].innerHTML=getCookie("success");		
+		mark=false;
+		clearTimeout(times1);
+		times1=setTimeout(function(){
+			window.location.href="index.html";
+			clearTimeout(times1);
+			},3000);
+		
+		}
+				
+	}
+	
+	
+	if(mark){
+		$(".message").css("display","none")
+		$(".login-failed").css("display","block");
+		clearTimeout(times);
+		times=setTimeout(function(){
+			window.location.href="login.html";
+			clearTimeout(times);
+		},3000);
+	
+	}
+});/*登录点击完毕---------bravo-----------*/
+	
+	
+	
+/*-------------注册信息判断--------------------------------------*/
+
+
+/*1用户名信息校验--------*/
+var yhmflag,emailsflag,passwdflag,confirmflag;
+
+var msg_yhm,$yhm;
+	$("#yhm").blur(function(){
+		$yhm=$(this).val();
+		yhmflag=true;
+		if(isEmpty($yhm)){
+			msg_yhm="-用户名不能为空";yhmflag=false;	
+		}else if($yhm.length<3){
+			msg_yhm="-用户名不能小于3个字符";yhmflag=false;	
+		}else if($yhm==getCookie("username"+(count-1))){
+			msg_yhm="该用户名已经注册";yhmflag=false;
+		}else{
+			msg_yhm="*可以注册";
+		}
+		$("#username_notice")[0].innerHTML=msg_yhm;
+		
+	});
+	
+/*邮箱的信息校验-----------------------*/	
+var msg_email,$emails;	
+	$("#emails").blur(function(){
+		$emails=$(this).val();
+		emailsflag=true;
+		if(isEmpty($emails)){
+			msg_email="-邮箱地址不能为空";emailsflag=false;	
+		}else if(isEmail($emails)){
+			msg_email="*可以注册";
+		}else{
+			msg_email="-邮箱地址不合法";emailsflag=false;
+		}
+		$("#email_notice")[0].innerHTML=msg_email;
+		
+	});
+/*密码信息的校验    不含空格长度大于6*/
+var msg_pass,$passwd;
+	$("#passwd").blur(function(){
+		$passwd=$(this).val();
+		passwdflag=true;
+		if(haveSpace($passwd)){
+			msg_pass="-密码不能含空格";passwdflag=false;
+		}else if($passwd.length<6){
+			msg_pass="-密码不能小于6个字符";passwdflag=false;			
+		}else{
+			msg_pass="*可以注册";							
+		}
+		$("#password_notice")[0].innerHTML=msg_pass;		
+	});
+/*确认密码------------------------------*/	
+var msg_confirm,$confirm;	
+	$("#confirm").blur(function(){
+		confirmflag=true;
+		$confirm=$(this).val();
+		$passwd=$("#passwd").val();
+		if($confirm.length<6){
+			msg_confirm="-密码不能小于6个字符";confirmflag=false;			
+		}else if(haveSpace($confirm)){
+			msg_confirm="-密码不能包含空格";confirmflag=false;			
+		}
+		else if($confirm!=$passwd){
+			msg_confirm="-两次输入密码不一致";confirmflag=false;							
+		}
+		else{
+			msg_confirm="*可以注册";							
+		}
+		$("#confirm_notice")[0].innerHTML=msg_confirm;
+		
+	});
+
+
+/*-------------------------注册按钮点击事件-----------------------------------------*/
+	$("#regisbtn").click(function(){
+		if($("#ifaccept")[0].checked==false){
+			$("#motaicover").css("display","block");
+			$("#alarm1")[0].innerHTML="-您没有接受协议"
+		}else{
+			if(yhmflag&&emailsflag&&passwdflag&&confirmflag){
+				$(".message").css("display","none");					
+				$(".regis-success").css("display","block");
+				$("#regisuser")[0].innerHTML=$("#yhm").val();
+				
+				
+				document.cookie="success="+$("#yhm").val();
+				showuser();
+				clearTimeout(times1);
+				times1=setTimeout(function(){
+					window.location.href="index.html";
+					clearTimeout(times1);
+				},3000);	
+				
+			}else{
+			$("#motaicover").css("display","block");
+			$("#alarm1")[0].innerHTML="-注册信息不合法"
+				
+			}
+		}
+	});
+	$("#alarmed").click(function(){
+		$("#alarm1")[0].innerHTML="";
+		$("#motaicover").css("display","none");
+		
+		
+	});
+	
+	
+	</script>
+</html>

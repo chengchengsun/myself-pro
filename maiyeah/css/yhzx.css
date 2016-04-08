@@ -1,0 +1,241 @@
+a {
+	color: #000;
+}
+
+.myaccount {
+	width: 1020px;
+	min-height: 460px;
+	height: auto!important;
+	height: 450px;
+	margin: 10px auto;
+}
+
+.account1 {
+	width: 188px;
+	height: 390px;
+	border: 1px solid #e3e3e3;
+	margin-right: 10px;
+}
+
+.accountit {
+	height: 29px;
+	background: url(../img/account/bg1.gif) no-repeat left top;
+	line-height: 29px;
+	padding-left: 12px;
+}
+
+.accountnav {
+	height: 354px;
+	padding: 6px 0 0 20px;
+}
+
+.accountnav li {
+	height: 35px;
+	background: url(../img/account/bg2.gif) no-repeat left 9px;
+	padding-left: 18px;
+	line-height: 35px;
+}
+.accountnav li:hover{color:#f60;}
+.accountnav .deepcoral{color:#d00;}
+.consell {
+	width: 820px;
+	margin-bottom: 10px;
+}
+
+.preposi {
+	height: 30px;
+	line-height: 30px;
+	font-weight: 100;
+}
+
+.linksfirt:hover {
+	color: #f60;
+}
+
+.source-box {
+	border: 1px solid #ececec;
+	background: url(../img/account/bg3.gif) repeat-x left top;
+	padding: 0 10px;
+	min-height: 385px;
+	height: auto!important;
+	height: 385px;
+}
+
+.redco {
+	color: #F60;
+}
+
+.deepred {
+	color: #d00;
+}
+
+.deepblue {
+	color: #00f;
+}
+
+.wlcmtit {
+	height: 75px;
+	padding-left: 10px;
+	line-height: 75px;
+}
+
+.recordtime {
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+}
+
+.publish {
+	height: 44px;
+	margin：3px 0 10px 10px;
+	border: 1px solid #d2e2f2;
+	background: #F8FBFF url(../img/account/tips.gif) no-repeat 30px 15px;
+	line-height: 44px;
+	padding-left: 50px;
+}
+
+.remem {
+	margin-left: 375px;
+}
+
+.messes {
+	margin-left: 355px;
+}
+
+.permessage {
+	height: 45px;
+	line-height: 45px;
+}
+
+table {
+	border-top: 1px solid #e3e3e3;
+	border-left: 1px solid #e3e3e3;
+	margin-bottom: 10px;
+}
+
+table td {
+	height: 28px;
+	border-bottom: 1px solid #e3e3e3;
+	border-right: 1px solid #e3e3e3;
+	text-align: center;
+}
+
+.chux {
+	width: 222px;
+	text-align: right;
+}
+
+.neir {
+	width: 567px;
+	text-align: left;
+	padding-left: 5px
+}
+
+.wlcmyou {
+	display: none;
+}
+
+.querenxiu {
+	text-align: center;
+}
+
+input[text] {
+	width: 152px;
+	height: 15px;
+}
+
+.querenxiu input {
+	width: 80px;
+	height: 20px;
+	background: #f60;
+	color: #fff;
+	border: 0;
+}
+
+.ddh {
+	width: 108px;
+}
+
+.xds {
+	width: 138px;
+}
+
+.dze {
+	width: 74px;
+}
+
+.yfe {
+	width: 68px;
+}
+
+.yje {
+	width: 60px;
+}
+
+.dzt {
+	width: 136px;
+}
+
+.ycz {
+	width: 206px;
+}
+
+.firstlie {
+	width: 96px;
+	text-align: right;
+}
+
+.seclie {
+	width: 271px;
+	padding-left: 5px;
+}
+
+.thirlie {
+	width: 145px;
+	text-align: right;
+}
+
+.bitian {
+	margin-top: 5px;
+}
+
+.sanhe,
+.sihe {
+	padding-left: 5px;
+}
+
+.special {
+	padding: 0;
+	margin: 0;
+}
+.shchang td{width:265px;font-weight:900;}
+
+.allrecord{height:44px;line-height:44px;border-top:1px solid #e3e3e3;text-align:center;border-bottom:1px solid #e3e3e3;}
+
+.tuijian{background:url(../img/account/bg3.gif) repeat-x left top;}
+
+
+.commands{height:300px;width:796px;background:url(../img/account/bg3.gif) repeat-x left top;}
+.recomand1{width:344px;text-align:right;}
+.recomand2{width:444px;text-align:left;padding-left:5px;}
+.leave{height:30px;}
+.lea{height:90px;}
+.leftdis{width:145px;text-align:right;}
+.wenjian{width:238px;height:20px;border:1px solid #e3e3e3;}
+.wenjian input{width:60px;height:20px;line-height:16px;}
+.tijian{padding-left:145px;height:32px;}
+.tijian input{width:64px;height:22px;background:#f60;border:0;}
+.tijian span{color:#f60;}
+.who1{text-align:right;}
+.who1 a:hover{color:#f60;}
+.who1 span{color:#aeb3c8;}
+.forwho1{width:145px;}
+.forwho2{width:80px}
+.forwho3{width:178px;}
+
+.houhou{height:55px;line-height:55px;border-top:1px solid #e3e3e3;text-align:center;border-bottom:1px solid #e3e3e3;}
+
+
+
+
+

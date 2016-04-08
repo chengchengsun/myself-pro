@@ -1,0 +1,49 @@
+.message{width:978px;height:425px;margin:20px auto; padding: 20px;border:1px solid #dcdcdc;background: #fff url(../img/login/bg1.jpg) repeat-x;}
+/*登录窗口----------------------*/
+.login-box{float:left;width:470px;}
+.login-title{overflow:hidden;line-height: 32px;} 
+.login-tit{float:left;border-bottom: 2px solid #f60;width:80px;font-size: 18px;text-align:center;}
+.fontit{width:380px;float:left;border-bottom: 2px solid #dcdcdc;padding-left:10px;}  
+.login-con{margin:15px auto;}   
+.form1{height:170px;margin-top:34px;}
+.hei1{height:35px;margin-bottom:24px;} 
+.hei2{height:35px;line-height:35px;} 
+.loginname{display:block;line-height:35px;width:80px;height:35px;text-align:right;}  
+.inpcssstyle{width:280px;height:29px;line-height:29px;padding:2px 5px; font-size:15px;border:1px solid #bfbdbf;border-radius:3px;background-color: #fff;} 
+.hei3{padding-left:80px;height:35px;line-height:35px;}
+.logsub{width:107px;height:35px;line-height:35px;background:#DB0119;border-radius:5px;border:0;color:#fff;letter-spacing:4px;margin-right:24px;} 
+.findpass a{color:#000;}
+.findpass a:hover{color:#f60;text-decoration:underline;}
+.partner{height:24px;margin-bottom:12px;}
+.loginmethod{display:block;width:80px;height:24px;text-align:right;line-height:35px;}
+
+  
+  /*注册窗口-----------------*/ 
+.regis-box{float:right;width:470px;height:428px;border-left:1px dashed #dcdcdc;padding-left:18px;}  
+.loginname span{color:#f00;}
+.form2{margin-top:15px;}  
+.separate{height:14px;line-height:14px;padding-left:80px;}
+.separate span{color:#f00;}
+.regisuser{height:35px;margin:5px 0;}
+.userrecom{width:162px;height:29px;line-height:29px;padding:2px 5px; font-size:15px;border:1px solid #bfbdbf;border-radius:3px;background-color: #fff;}
+.havenone{display:block;line-height:35px;width:80px;height:35px;}
+/*登陆成功---------------*/
+.login-success{width:1018px;height:193px;margin:20px auto;display:none;}
+.login-failed{width:1018px;height:193px;margin:20px auto;display:none;}
+.dangqian{height:21px;}
+.dangqian2{height:172px;border:1px solid #e5e5e5;}
+.xtxx{height:29px;background:url(../img/login/bg.png) repeat-x left top;line-height:28px;padding-left:10px;}
+/*登录状态------------------*/			
+.loginstate{height:86px;text-align:center;line-height:86px;color:#f00;font-weight:900;}			
+.backpre{height:14px;text-align:center;}			
+.backpre a{color:#000;}			
+.backpre a:hover{color:#f60;}
+/*注册成功--------------------------*/
+.regis-success{width:1018px;height:193px;margin:20px auto;display:none;}
+
+/*模态窗口部分----------------------*/
+#motaicover{width:100%;height:100%;position:fixed;left:0;top:0;background:rgba(0,0,0,0.6);display:none;}
+.motaiwd{width:300px;height:180px;position:fixed;left:40%;top:30%;}
+#alarm1{height:100px;background:#fff;line-height:100px;text-align:center;}
+.alarm2{height:60px;background:#eee;padding:20px 0 0 170px; }
+#alarmed{width:80px;height:30px;}

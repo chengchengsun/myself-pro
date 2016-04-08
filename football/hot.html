@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	    <meta content="telephone=no" name="format-detection" />
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   		<link rel="stylesheet" href="css/reset.css" />
+   		<link rel="stylesheet" type="text/css" href="css/hot.css"/>
+   		<script type="text/javascript" src="js/zepto.min.js"></script>
+   		<script type="text/javascript" src="js/rem.js"></script>
+   		<script type="text/javascript" src="js/iscroll.js"></script>
+		<title>热点关注</title>
+	</head>
+	<body>
+		<header>
+			<div>
+			<a href="javascript:void(0)" class="focus">热点</a><a href="focus.html">关注</a>
+			</div>
+		</header>
+		<nav>
+			<p>足球现场</p>
+			<p>足球生活</p>
+			<p>足球美女</p>
+			<div class="bott"></div>
+		</nav>
+		<section  id="gun0" class="hid sho">
+			<div class="cont">
+			</div>
+		</section>
+		<section  id="gun1" class="hid">
+			<div class="cont">
+			</div>
+		</section>
+		<section  id="gun2" class="hid">
+			<div class="cont">
+			</div>
+		</section>
+		<footer>
+			<a href="javascript:void(0)">
+			<dl class="selec">
+				<dt class="iconfont">&#xe601;</dt>
+				<dd>首页</dd>
+			</dl>
+			</a>
+			<a href="found.html">
+			<dl>
+				<dt class="iconfont">&#xe779;</dt>
+				<dd>发现</dd>
+			</dl>
+			</a>
+			<a href="#">
+			<dl class="file_box">
+				<dt class="camera iconfont">&#xe6de;</dt>
+				<dd class="files"><input type="file" /></dd>
+			</dl>
+			</a>
+			<a href="pers.html">
+			<dl>
+				<dt class="iconfont">&#xe600;</dt>
+				<dd>我的</dd>
+			</dl>
+			</a>
+			<a href="#">
+			<dl>
+				<dt class="iconfont">&#xe638;</dt>
+				<dd>退出</dd>
+			</dl>
+			</a>
+		</footer>
+	</body>
+	
+	<script type="text/javascript">
+	
+		window.onload=function(){
+			
+			var myScroll0,myScroll11,myScroll12,mark=0,count=0,flag0=true,flag10=true;
+			var $winHei=$(window).height();
+			var $heaHei=$("header").height();
+			var $navHei=$("nav").height();
+			var $fooHei=$("footer").height();
+			$(".sho").height($winHei - $heaHei - $navHei - $fooHei-10);
+			myScroll0 = new iScroll("gun0", {
+				hScrollbar: false,
+				vScrollbar: false,
+				onScrollMove:function(){
+					if(this.y<(this.maxScrollY-100)){
+						flag0=true;
+					}
+				},
+				onScrollEnd:function(){
+					if(flag0&&flag10){
+						shows();
+					}
+				}
+			});
+			myScroll1 = new iScroll("gun1", {
+				hScrollbar: false,
+				vScrollbar: false,
+				onScrollMove:function(){
+					if(this.y<(this.maxScrollY-100)){
+						flag0=true;
+					}
+				},
+				onScrollEnd:function(){
+					if(flag0&&flag10){
+						shows();
+					}
+				}
+			});
+			myScroll2 = new iScroll("gun2", {
+				hScrollbar: false,
+				vScrollbar: false,
+				onScrollMove:function(){
+					if(this.y<(this.maxScrollY-100)){
+						flag0=true;
+					}
+				},
+				onScrollEnd:function(){
+					if(flag0&&flag10){
+						shows();
+					}
+				}
+			});
+			
+			var link="http://101.200.173.217:8080/FootBall/upload/files/20150715/thumbnail";
+			
+			function shows(){
+				$.ajax({
+					url:"http://localhost:8080/Proxy/FootBall/tweet/json/query/hotspot.do",
+					data:{category:count+1},
+					success:callback
+				});
+			}
+			shows();
+			function callback(str){
+				flag0=false;
+				var odata=JSON.parse(str);
+				var arr=odata.data.tweetlist;
+				console.log(arr);
+				if(mark<arr.length){var flag4=true;}
+				
+				/*mark相当于一个分页标记，而 count则是分栏的标记*/
+				if(mark<(arr.length-arr.length%10)&&flag4){
+					for(var i=mark;i<10+mark;i++){
+						var odl=$("<dl class='pic'><dt><a><img  src='"+link+arr[i].defaultFileName+"'></a></dt><dd>"+arr[i].content+"</dd></dl>");
+						odl.appendTo("#gun"+count+">.cont");
+					}
+					mark=mark+10;
+					console.log(mark);
+					myScroll0.refresh();
+					myScroll1.refresh();
+					myScroll2.refresh();
+				}else{
+					var extr=(arr.length)%mark;
+					for(var i=mark;i<extr+mark;i++){
+						var odl=$("<dl class='pic'><dt><a><img  src='"+link+arr[i].defaultFileName+"'></a></dt><dd>"+arr[i].content+"</dd></dl>");
+						odl.appendTo("#gun"+count+">.cont");
+					}
+					flag10=false;
+					myScroll0.refresh();
+					myScroll1.refresh();
+					myScroll2.refresh();
+					mark+=3;
+					flag4=false;
+				}
+			}
+			$("header a").tap(function(){
+				$("header a").removeClass("focus");
+				$(this).addClass("focus");
+			});
+			$("nav p").tap(function(){
+				flag10=true;
+				count=$(this).index();
+				$(".bott").css("left",windowW/3*count+"px");
+				mark=0;
+				$("section").removeClass("sho");
+				$("section").eq(count).addClass("sho");
+				$(".sho .pic").remove();
+				$(".sho").height($winHei - $heaHei - $navHei - $fooHei-10);
+				shows();
+				
+			});
+			var windowW=$(window).width();
+			$("section").swipeLeft(function() {
+				$("section").removeClass("sho");
+				var indexnum=$("section").index($(this))+1;
+				if(indexnum==3){
+					indexnum=0;
+				}
+				$(".bott").css("left",windowW/3*indexnum+"px");
+				$("section").eq(indexnum).addClass("sho");
+				$(".sho .pic").remove();
+				$(".sho").height($winHei - $heaHei - $navHei - $fooHei-10);
+				flag10 = true;
+				count=indexnum;
+				mark=0;
+ 				shows();
+			});
+			$("section").swipeRight(function() {
+				$("section").removeClass("sho");
+				$(".sho .pic").remove();
+				var indexnum=$("section").index($(this))-1;
+				if(indexnum==-1){
+					indexnum=2;
+				}
+				$(".bott").css("left",windowW/3*indexnum+"px");
+				$("section").eq(indexnum).addClass("sho");
+				$(".sho .pic").remove();
+				$(".sho").height($winHei - $heaHei - $navHei - $fooHei-10);
+				flag10 = true;
+				count=indexnum;
+				mark=0;
+ 				shows();
+ 			
+			});
+
+
+
+
+			$("footer dl").tap(function(){
+				$("footer dl").removeClass("selec");
+				$(this).addClass("selec");
+				
+			});
+		}
+		
+	</script>
+</html>

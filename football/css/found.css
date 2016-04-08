@@ -1,0 +1,204 @@
+html{
+	height:100%;
+	background:#c0c0c0;
+}
+body{
+	margin:0 auto;
+	width:100%;
+	max-width:6.40rem;
+	height:100%;
+	background:#f1f1f1;
+	font-size:16px;
+	
+}
+header{
+	width:100%;
+	height:6.88%;
+	line-height:0.74rem;
+	text-align:center;
+	background:#0183b7;
+	color:white;
+	font-size:0.32rem;
+	
+}
+
+section{
+	height:84.95%;
+	width:100%;
+	background:#f1f1f1;
+}
+
+
+.res{
+	height:0.66rem;
+	line-height:0.66rem;
+	border-bottom:1px solid #f1f1f1;
+	background:white;
+	margin-bottom:5px;
+	
+}
+
+.haha{
+	width:5.02rem;
+	height:0.46rem;
+	border:1px solid #aaa;
+	border-radius:3px;
+	padding-left:0.13rem;
+	margin:0 0.1rem;
+	font-size:0.24rem;
+}
+.sear{
+	width:0.91rem;
+	height:0.46rem;
+	border:1px solid #aaa;
+	border-radius:3px;
+	background:#0f91c5;
+	color:white;
+	font-size:0.24rem;
+	
+}
+
+aside{
+	width:100%;
+	background:white;
+}
+
+
+
+
+
+.inform{
+	box-sizing:border-box;
+	padding-top:0.21rem;
+	height:1.41rem;
+	background:white;
+	border-bottom:1px solid #e5e5e5;
+}
+.hid{display:none;}
+.inform img{
+	width:0.99rem;
+}
+.meng{
+	float:left;
+}
+.meng:first-child{
+	margin-left:0.23rem;
+	margin-right:0.19rem;
+}
+
+.meng p{
+	font-size:0.28rem;
+	height:0.46rem;
+	line-height:0.46rem;
+}
+
+.meng span{
+	display:block;
+	width:3rem;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	font-size:0.24rem;
+	line-height:0.52rem;
+	color:#999;
+}
+
+/*.zan{
+	float:right;
+	background:lightcyan;
+	font-size:0.24rem;
+	margin-right:0.26rem;
+	padding-right:0.32rem;
+	line-height:0.42rem;
+	color:#ccc;
+	background:url(../img/zan.png) no-repeat right center;
+	background-size:0.24rem;
+}*/
+.zan{
+	display: block;
+    float: right;
+    width: 1.2rem;
+    font-size: 0.28rem;
+    color: white;
+    background: #0183b7;
+    margin-right: 0.26rem;
+    text-align: center;
+    line-height: 0.42rem;
+    padding: 0 0.05rem;
+}
+.had{
+	background:gray;
+}
+
+footer{
+	height:8.17%;
+	width:100%;
+	background:white;
+}
+footer a{display:block;width:20%;float:left;}
+
+footer dl{
+	height:0.8rem;
+	color:#ccc;	
+	text-align:center;
+}
+footer dt{
+	width:100%;
+	height:0.48rem;	
+	line-height:0.56rem;
+	overflow:hidden;
+
+}
+footer dd{
+	height:0.32rem;
+	line-height:0.32rem;
+	font-size:0.24rem;
+}
+footer .selec{
+	color:#0f91c5;
+}
+
+footer .camera{
+	margin:-4px auto 0;
+	width:0.84rem;
+	height:0.84rem;
+	background:white;
+	line-height:0.84rem;
+	font-size:0.4rem;
+	border:1px solid #ccc;
+	border-radius:50%;
+}
+footer .file_box{
+	position:relative;
+}
+footer .files{
+	opacity:0;
+	filter:alpha(opacity=0);
+	width:0.84rem;
+	height:0.84rem;
+	border-radius:50%;
+	position:absolute;
+	background:yellowgreen;
+	z-index:99;
+	top:0;left:0.23rem;
+}
+.files input[type="file"]{
+	width:0.84rem;
+	height:0.84rem;
+	border:0;
+}
+
+@font-face {font-family: 'iconfont';
+    src: url('../font/iconfont.eot'); /* IE9*/
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+

@@ -1,0 +1,66 @@
+html{
+	background:#f4f4f4;
+	height:100%;
+}
+body{
+	width:100%;
+	height:100%;
+	max-width:680px;
+	margin:0 auto;
+	background:white;
+	font-size:16px;
+}
+header{
+	height:0.74rem;
+	width:100%;
+	line-height:0.74rem;
+	text-align:center;
+	color:white;
+	background:#0f91c5;
+	font-size:0.34rem;
+}
+.form{
+	width:100%;
+}
+.inform{
+	margin:0 0.3rem;
+}
+.inform input{
+	margin-top:0.42rem;
+	width:100%;
+	height:0.66rem;
+	line-height:0.66rem;
+	font-size:0.28rem;
+	border-bottom:1px solid #7f7f7f;
+	
+}
+.inform input:first-child{
+	margin-top:0.3rem;
+	height:0.52rem;
+	line-height:0.52rem;
+}
+.form .sub{
+	margin:0.9rem 0.3rem 0;
+	height:0.78rem;
+	line-height:0.78rem;
+	font-size:0.34rem;
+	color:white;
+	text-align:center;
+	border:0;
+	border-radius:3px;
+	background:#0f91c5;
+	position:relative;
+	
+}
+.otele{
+	display:none;
+	width:100%;
+	height:0.7rem;
+	line-height:0.7rem;
+	position:absolute;
+	top:-0.8rem;
+	color:red;
+	left:0;
+}
+
+

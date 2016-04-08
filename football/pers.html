@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	    <meta content="telephone=no" name="format-detection" />
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   		<link rel="stylesheet" href="css/reset.css" />
+   		<link rel="stylesheet" type="text/css" href="css/pers.css"/>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+   		<script type="text/javascript" src="js/touch-0.2.14.min.js"></script>
+   		<script type="text/javascript" src="js/rem.js"></script>   		
+		<title>个人中心</title>
+	</head>
+	<body>
+		<header>
+			个人中心
+		</header>
+		<section>
+			<div class="res"><input type="text" placeholder="请输入昵称" class="haha"/><button class="sear">搜索</button></div>
+			<div class="inform">
+				<div class="meng"><img src="img/focus.png"/></div>
+				<div class="meng">
+					<p>我叫小萌</p>
+					<span>
+						我是小萌我怕誰！哈哈哈哈！
+					</span>
+				</div>
+				<div class="zan">382344</div>
+			</div>
+			<div class="tit">
+				<p class="sele">照片（1）</p>
+				<p>关注（3）</p>
+				<p>粉丝（8）</p>
+			</div>
+			<div class="show">
+				<img src="img/yang.jpg"/>
+			</div>
+		</section>
+		<footer>
+			<a href="hot.html">
+			<dl>
+				<dt class="iconfont">&#xe601;</dt>
+				<dd>首页</dd>
+			</dl>
+			</a>
+			<a href="found.html">
+			<dl>
+				<dt class="iconfont">&#xe779;</dt>
+				<dd>发现</dd>
+			</dl>
+			</a>
+			<a href="#">
+			<dl class="file_box">
+				<dt class="camera iconfont">&#xe6de;</dt>
+				<dd class="files"><input type="file" /></dd>
+			</dl>
+			</a>
+			<a href="pers.html">
+			<dl class="selec">
+				<dt class="iconfont">&#xe600;</dt>
+				<dd>我的</dd>
+			</dl>
+			</a>
+			<a href="#">
+			<dl>
+				<dt class="iconfont">&#xe638;</dt>
+				<dd>退出</dd>
+			</dl>
+			</a>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			touch.on("footer dl","tap",function(){
+				$("footer dl").removeClass("selec");
+				$("footer dl").children().removeClass("selec");
+				if($(this).attr("type")=="file"){
+					$(this).parents("dl").addClass("selec");
+				}else{
+					$(this).addClass("selec");
+					$(this).siblings().addClass("selec");
+				}
+			});
+			touch.on(".tit p","tap",function(){
+				$(".tit>p").removeClass("sele");
+				$(this).addClass("sele");
+			});
+			
+			
+		}
+	</script>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	    <meta content="telephone=no" name="format-detection" />
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   		<link rel="stylesheet" href="css/reset.css" />
+   		<link rel="stylesheet" type="text/css" href="css/found.css"/>
+   		<script type="text/javascript" src="js/rem.js"></script>  
+   		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+   		<script type="text/javascript" src="js/iscroll.js"></script>
+   		<script type="text/javascript" src="js/touch-0.2.14.min.js"></script>
+		<title>发现</title>
+	</head>
+	<body>
+		<header>
+			发现
+		</header>
+		<section>
+			<div class="res"><input type="text" placeholder="请输入昵称" class="haha"/><button class="sear">搜索</button></div>
+			<aside id="shi">
+			<div class="cont">
+				<div class="inform hid">
+					<div class="meng"><img /></div>
+					<div class="meng">
+						<p></p>
+						<span class="theam">
+						</span>
+					</div>
+					<span class="zan">关 注</span>
+				</div>
+			</div>
+			</aside>
+		</section>
+		<footer>
+			<a href="hot.html">
+			<dl>
+				<dt class="iconfont">&#xe601;</dt>
+				<dd>首页</dd>
+			</dl>
+			</a>
+			<a href="found.html">
+			<dl  class="selec">
+				<dt class="iconfont">&#xe779;</dt>
+				<dd>发现</dd>
+			</dl>
+			</a>
+			<a href="#">
+			<dl class="file_box">
+				<dt class="camera iconfont">&#xe6de;</dt>
+				<dd class="files"><input type="file" /></dd>
+			</dl>
+			</a>
+			<a href="pers.html">
+			<dl>
+				<dt class="iconfont">&#xe600;</dt>
+				<dd>我的</dd>
+			</dl>
+			</a>
+			<a href="#">
+			<dl>
+				<dt class="iconfont">&#xe638;</dt>
+				<dd>退出</dd>
+			</dl>
+			</a>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			
+			var myScroll,flag1,flag2,odata;
+			
+			touch.on("footer dl","tap",function(){
+				$("footer dl").removeClass("selec");
+				$("footer dl").children().removeClass("selec");
+				if($(this).attr("type")=="file"){
+					$(this).parents("dl").addClass("selec");
+				}else{
+					$(this).addClass("selec");
+					$(this).siblings().addClass("selec");
+				}
+			});
+			var $winHei=$(window).height();
+			var $heaHei=$("header").height();
+			var $resHei=$(".res").height();
+			var $fooHei=$("footer").height();
+			$("#shi").height($winHei-$heaHei-$resHei-$fooHei-10);
+				myScroll=new iScroll("shi",{
+				hScrollbar: false,
+				vScrollbar: false,
+				onScrollMove:function(){
+					if(this.y<(this.maxScrollY-100)){
+						flag1=true;
+					}
+					else if(this.y>100){
+						flag2=true;
+					}
+				},
+				onScrollEnd:function(){
+					if(flag1){
+						count++;
+						show();
+					}else if(flag2){
+						count=1;
+						show();
+					}
+				}
+				
+			});
+			var count=3;
+			function show(){
+				$.ajax({
+					url:"http://localhost:8080/Proxy/FootBall/user/json/queryall.do",
+					data:{
+						"oginsuserid":window.localStorage.getItem("userid"),
+						"page.pageNo":count
+					},
+					type:"get",
+					success:callback
+				});
+				
+			}
+			show();
+			var links="http://101.200.173.217:8080/FootBall";
+			function callback(str){
+				odata=JSON.parse(str).data.userlist;
+				if(flag2){
+					$(".inform").not(".hid").remove();
+				}
+				flag1=false;
+				flag2=false;
+				for(var i=0;i<odata.length;i++){
+					var news=$(".inform").eq(0).clone(true);
+					news.find("img").attr("src",links+odata[i].avatarpath);
+					news.find("p").text(odata[i].nickname);	
+					news.find(".theam").text(odata[i].favoriteTeam);
+					news.removeClass("hid");
+					news.find(".zan").attr({"objid":odata[i].id,"flag3":true});
+					$(".cont").append(news);
+				}
+				myScroll.refresh();
+			}
+			/*模糊查询接口不可用---------------------*/
+			$(".sear").click(function(){
+				var sear=$(".haha").val();
+				console.log(sear)
+				flag2=true;
+				$.ajax({
+					url:"http://localhost:8080/Proxy/FootBall/user/json/queryall.do",
+					data:{
+						"keyword":sear,
+						"oginsuserid":window.localStorage.getItem("userid"),
+						"page.pageNo":count
+					},
+					type:"get",
+					success:callback
+				});
+			})
+			
+			
+			/*关注信息---------------------*/
+			var guan1="http://localhost:8080/Proxy/FootBall/attention/json/follow.do";
+			var guan2="http://localhost:80/Proxy/FootBall/attention/json/unfollow.do";
+			var objid;
+			
+			
+			$(".zan").click(function(){
+				objid=$(this).attr("objid");
+				if($(this).attr("flag3")=="true"){
+					$(this).addClass("had").text("取消关注");
+					$(this).attr("flag3",false);
+					concentrate(objid,guan1);
+				}else{                               /*取消关注---------------*/
+					$(this).removeClass("had").text("关 注");
+					$(this).attr("flag3",true);
+					concentrate(objid,guan2);
+				}
+			});
+			function concentrate(obj,urlm){
+				$.ajax({
+					url:urlm,
+					data:{
+						"loginsuserid":window.localStorage.getItem("userid"),
+						"tagetuserid":obj
+					},
+					type:"get",
+					success:cb
+				})
+			}
+			function cb(str){
+				console.log(str);/*关注状态返回值*/
+			}
+			
+		}
+	</script>
+</html>

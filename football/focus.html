@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	    <meta content="telephone=no" name="format-detection" />
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   		<link rel="stylesheet" href="css/reset.css" />
+   		<link rel="stylesheet" type="text/css" href="css/focus.css"/>
+   		<script type="text/javascript" src="js/rem.js"></script>
+   		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+   		<script type="text/javascript" src="js/iscroll.js"></script>
+   		<script type="text/javascript" src="js/touch-0.2.14.min.js"></script>
+		<title>关注</title>
+	</head>
+	<body>
+		<header>
+			<a href="hot.html">热点</a><a href="javascript:void(0)"  class="focus">关注</a>
+		</header>
+		<section id="gund">
+		<div>
+			<aside>
+				<div class="inform">
+					<div class="meng"><img src="img/focus.png"/></div>
+					<div class="meng">
+						<p>我叫小萌</p>
+						<span>
+							我是小萌我怕誰！哈哈哈哈！
+						</span>
+					</div>
+					<div class="zan">382344</div>
+				</div>
+				<div class="cat">
+					<img src="img/cat.jpg" />
+				</div>
+				<div class="zhu">小丸子啊小丸子!</div>
+			</aside>
+		</div>
+		</section>
+		<footer>
+			<a href="javascript:void(0)">
+			<dl class="selec">
+				<dt class="iconfont">&#xe601;</dt>
+				<dd>首页</dd>
+			</dl>
+			</a>
+			<a href="found.html">
+			<dl>
+				<dt class="iconfont">&#xe779;</dt>
+				<dd>发现</dd>
+			</dl>
+			</a>
+			<a href="#">
+			<dl class="file_box">
+				<dt class="camera iconfont">&#xe6de;</dt>
+				<dd class="files"><input type="file" /></dd>
+			</dl>
+			</a>
+			<a href="pers.html">
+			<dl>
+				<dt class="iconfont">&#xe600;</dt>
+				<dd>我的</dd>
+			</dl>
+			</a>
+			<a href="#">
+			<dl>
+				<dt class="iconfont">&#xe638;</dt>
+				<dd>退出</dd>
+			</dl>
+			</a>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			touch.on("header a","tap",function(){
+				$("header a").removeClass("focus");
+				$(this).addClass("focus");
+			});
+			touch.on("footer dl","tap",function(){
+				
+				$("footer dl").removeClass("selec");
+				$("footer dl").children().removeClass("selec");
+				if($(this).attr("type")=="file"){
+					$(this).parents("dl").addClass("selec");
+				}else{
+					$(this).addClass("selec");
+					$(this).siblings().addClass("selec");
+				}
+				
+			});
+			
+			
+			
+			
+			var winH=$(window).height();
+			var fooH=$("footer").height();
+			var heaH=$("header").height();
+			$("#gund").height(winH-fooH-heaH-5);
+			var gun=new iScroll("gund");
+			/*$("#gund").height(winH-fooH-heaH-5);
+			gun.refresh();	当高度定义在后边的时候 对新定义的对象施加refresh（）方法*/
+			$.ajax({
+				url:"http://localhost:8080/Proxy/FootBall/attention/json/queryall/followed.do",
+				data:{
+					loginsuserid:window.localStorage.getItem("userid")
+				},
+				success:calls
+			})
+			
+			
+			
+			
+			function calls(str){
+			console.log(str);
+				/*$("<aside>
+					<div class="inform">
+						<div class="meng"><img src="img/focus.png"/></div>
+						<div class="meng">
+							<p>我叫小萌</p>
+							<span>
+								我是小萌我怕誰！哈哈哈哈！
+							</span>
+						</div>
+						<div class="zan">382344</div>
+					</div>
+					<div class="cat">
+						<img src="img/cat.jpg" />
+					</div>
+					<div class="zhu">小丸子啊小丸子!</div>
+				</aside>")*/
+			
+			
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+	</script>
+</html>
