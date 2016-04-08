@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+.w{width:1200px}
+/*右面*/
+#main .right{float:left; width:1000px; font-size:14px}
+#main .right .title{ margin-bottom:8px; height:20px; line-height:20px; border-bottom:1px solid #c80a28; color:#c80a28; font-weight:bold; font-size:14px;}
+#main .right .title .blue{ color:#36c; float:right; font-weight:normal; font-size:12px;}
+#main .right .info{ width:998px; border:1px solid #ddd; border-bottom:0;}
+#main .right .info .header{ height:33px; border-bottom:1px solid #ddd; line-height:33px; color:#666; background:#fafafa;}
+#main .right .info .header div{ float:left; height:33px; border-right:1px solid #ddd; text-align:center;}
+#main .right .info .header .name{ width:150px;}
+#main .right .info .header .add{ width:350px;}
+#main .right .info .header .tel{ width:195px;}
+#main .right .info .header .con{ width:300px; border-right:0;}
+#main .right .info .nothing{ display:none; height:33px; width:953px; padding-left:45px; border-bottom:1px solid #ddd; line-height:33px; color:#666;}
+#main .right .info .something{  height:33px; border-bottom:1px solid #ddd; line-height:33px; color:#666; }
+#main .right .info .something div{ float:left; height:33px; border-right:1px solid #ddd; text-align:center;}
+#main .right .info .something .name{ width:150px;}
+#main .right .info .something .add{ width:350px;}
+#main .right .info .something .tel{ width:195px;}
+#main .right .info .something .con{ width:280px; padding:0 10px; border-right:0; text-align:left;}
+#main .right .info .something .con .def{ float:left;}
+#main .right .info .something .con .defed{ float:left; font-weight:bold;}
+#main .right .info .something .con a{ float:right;}
+#main .right .info .something .con .sp1{ padding:0 5px; float:right;}
+#main .right .info .something .con .fix{ color:#36c;}
+/*==========================模态对话框======================*/
+#com{ display:none; position:absolute; z-index:500; top:300px; left:300px; width:430px; height:239px; padding:0 6px; border:9px solid #ddd; background:#fff;}
+#com .title{ width:410px; height:36px; line-height:36px; border-bottom:1px dashed #ddd; font-weight:bold; font-size:16px; color:#666; padding:0 5px 0 15px;}
+#com .title a{ display:block; float:right; width:15px; height:15px; background:url(../img/imgChangeAdd/dialog_close_button.png) -4px -24px no-repeat; margin-top:10px;}
+#com .title a:hover{ background:url(../img/changeAddImg/dialog_close_button.png) -4px -3px no-repeat;}
+#com .mid{ margin-bottom:10px; width:410px; height:142px; padding-top:13px; border-bottom:1px dashed #ddd;}
+#com .mid div{ padding-left:20px; margin-bottom:7px; height:27px; line-height:27px;}
+#com .mid div .red{ color:#ff003f; line-height:27px; padding-right:5px;}
+#com .mid div span{ color:#666; display:inline-block; width:63px;}
+#com .mid div input{ width:240px; padding-left:6px; height:25px; border:1px solid #dedede; color:#dedede;}
+#com .mid div select{ width:120px; height:16px; margin-right:5px; line-height:16px;}
+#com .yes{ text-align:center; line-height:30px; font-size:15px; color:#fff; display:inline-block; width:75px; height:30px; background:url(../img/changeAddImg/btn_yes_no.png) 0 0 no-repeat; margin-right:13px;}
+-#com .yes:hover{ background:url(../img/imgChangeAdd/btn_yes_no.png) 0 0 no-repeat;}
+#com .bot .no{ text-align:center; line-height:30px; font-size:15px; color:#666;display:inline-block; width:75px; height:30px; background:url(../img/changeAddImg/btn_yes_no.png) -81px 0 no-repeat; margin-right:13px;}
+#com .bot .no:hover{ background:url(../img/changeAddImg/btn_yes_no.png) -81px -36px no-repeat;}
+#com .bot{ text-align:center;}
+#com .bot input{ margin-right:8px;}

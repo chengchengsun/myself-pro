@@ -1,0 +1,477 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>收货地址</title>
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/changeAdd.css">
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/changeAdd.js"></script>
+<script>
+$(function(){
+	dft();
+	del();
+	addAdd();
+	compile();
+	listNull();
+	fix();
+	
+})
+
+
+
+
+//判断列表是否为空
+function listNull(){
+	if($('.something').size()==0){
+		$('.nothing').css('display','block');
+	}else{
+		$('.nothing').css('display','none');
+	}
+}
+//操作框功能
+function compile(){
+//关闭按钮
+	$('.close').click(function(){
+		$('#com').hide();
+	})
+//取消按钮
+	$('#com > .bot > .no').click(function(){
+		$('#com').hide();
+	})
+//输入框
+	$('#com input').click(function(){
+		$(this).css({'color':'#333','borderColor':'#333'})
+	})
+	$('#com input').blur(function(){
+		$(this).css({'color':'#dedede','borderColor':'#dedede'})
+	})
+//确认按钮
+	$('#com > .bot > .yes').click(function(){
+		//修改状态
+		if(f){
+			if(cneeTest()&&pvTest()&&cityTest()&&dtaddTest()&&pnbTest()){
+				$('#com').hide();
+				var $newAdd = $('.something').eq($i);
+				$newAdd.find('.name').text($('.cnee').val());
+				var pv = '';
+				if($('.pv').val()==1){pv = '北京市 '}
+				var ci = '';
+				if($('.city').val()==1){ci = '东城区 '}
+				else if($('.city').val()==2){ci = '西城区 '}
+				$newAdd.find('.add').text(pv+' '+ci+' '+$('.dtadd').val());
+				$newAdd.find('.tel').text($('.pnb').val());
+				btnMr($newAdd);
+			}
+		}
+		//添加状态
+		else{
+			
+			if(cneeTest()&&pvTest()&&cityTest()&&dtaddTest()&&pnbTest()){
+				$('#com').hide();
+				var $newAdd = $('.something').first().clone();
+				$newAdd.find('.name').text($('.cnee').val());
+				var pv = '';
+				if($('.pv').val()==1){pv = '北京市 '}
+				var ci = '';
+				if($('.city').val()==1){ci = '东城区 '}
+				else if($('.city').val()==2){ci = '西城区 '}
+				$newAdd.find('.add').text(pv+' '+ci+' '+$('.dtadd').val());
+				$newAdd.find('.tel').text($('.pnb').val());
+				btnMr($newAdd);
+				$('.boder').append($newAdd);
+				listNull();
+				del();
+			}
+		}
+	})
+}
+//默认按钮
+function btnMr(obj){
+	var oMr = document.getElementById('mck');
+	if(oMr.checked){
+		$('.defed').text('设为默认地址');
+		$('.defed').addClass('def');
+		$('.defed').removeClass('defed');
+		obj.find('.def').addClass('defed');
+		obj.find('.def').text('默认地址');
+		obj.find('.def').removeClass('def');
+	}
+}
+function cneeTest(){
+	if($('.cnee').val()==''){
+		alert('请填写收货人');
+		return false;
+	}else{
+		return true;
+	}
+}
+function pvTest(){
+	if($('.pv').val()==0){
+		alert('请选择城市');
+		return false;
+	}else{
+		return true;
+	}
+}
+function cityTest(){
+	if($('.city').val()==0){
+		alert('请选择城区');
+		return false;
+	}else{
+		return true;
+	}
+}
+function dtaddTest(){
+	if($('.dtadd').val()==''){
+		alert('请填写详细地址');
+		return false;
+	}else{
+		return true;
+	}
+}
+function pnbTest(){
+	if($('.pnb').val()==''){
+		alert('请填写电话');
+		return false;
+	}else{
+		return true;
+	}
+}
+//添加地址按钮
+function addAdd(){
+	$('.addNewAdd').click(function(){
+		$('#com').css({'left':$(window).width()/2-$('#com').width()/2+'px','top':$(window).scrollTop()+200+'px'});
+		$('.cnee').val('');
+		$('.dtadd').val('');
+		$('.pv').val('0');
+		$('.city').val('0');
+		$('.pnb').val('');
+		$('#com').show(300);
+		f = false;
+	})
+}
+//删除按钮
+function del(){
+	$('.del').each(function(index){
+		$(this).click(function(){
+			$('.something').eq(index).remove();
+			del();
+			listNull();
+		})
+	})
+}
+//设为默认按钮
+function dft(){
+	$('.def').each(function(){
+		$(this).click(function(){
+			$('.defed').text('设为默认地址');
+			$('.defed').addClass('def');
+			$('.defed').removeClass('defed');
+			$(this).addClass('defed');
+			$(this).text('默认地址')
+			$(this).removeClass('def');
+		})
+	})
+}
+//修改按钮
+//修改状态指针
+var f = false;
+var $i = 0;
+function fix(){
+	$('.fix').each(function(index){
+		$(this).click(function(){
+			$('#com').css({'left':$(window).width()/2-$('#com').width()/2+'px','top':$(window).scrollTop()+200+'px'});
+			$('.cnee').val($('.something').eq(index).find('.name').text());
+			$('.dtadd').val($('.something').eq(index).find('.add').text());
+			$('.pv').val('0');
+			$('.city').val('0');
+			$('.pnb').val($('.something').eq(index).find('.tel').text());
+			$('#com').show(300);
+			f = true;
+			$i = index;
+		})
+	})
+}
+</script>
+</head>
+
+<body>
+<!--弹出层-->
+<div id="com">
+    <div class="title">编辑收货地址<a class="close" href="###"></a></div>
+    <div class="mid">
+        <div>
+            <b class="red">*</b><span>收货人：</span><input class="cnee" type="text" />
+        </div>
+        <div>
+            <b class="red">*</b><span>所在地区：</span>
+            <select class="pv"><option value="0">请选择</option><option value="1">北京市</option></select>
+            <select class="city"><option value="0">请选择</option><option value="1">东城区</option><option value="2">西城区</option></select>
+        </div>
+        <div>
+            <b class="red">*</b><span>详细地址：</span><input class="dtadd" type="text" />
+        </div>
+        <div>
+            <b class="red">*</b><span>电话：</span><input class="pnb" type="text" />
+        </div>
+    </div>
+    <div class="bot">
+    <a class="yes" href="###">确定</a>
+    <a class="no" href="###">取消</a>
+    <input id="mck" type="checkbox"/><label>默认</label>
+    </div>
+</div>
+
+<!--头部开始-->
+<div class="outTop">
+     <div class="top m w">
+        <ul class="topLeft l">
+            <li><a>华南城旗下零售电商平台</a></li>
+            <li><a href="###">华盛outlets</a></li>
+            <li><a class="zk">真正工厂直销的折扣网站</a></li>
+        </ul>
+        <ul class="topRight r">
+            <li>
+                <a href="###">手机奥莱购</a>
+            </li>
+            <li><a href="login.html">登陆</a></li>
+            <li><a href="zhuce.html">免费注册</a></li>
+            <li class="My_al">
+                <a href="###">我的奥莱<span class="sanjiao">▽</span></a>
+                <ul class="myal">
+                   <li><a href="orderForm.html">我的订单</a></li>
+                   <li><a href="collect.html">我的收藏</a></li>
+                   <li><a href="car.html">购物车</a></li>
+                </ul>
+            </li>
+            <li><a href="###">帮助中心</a></li>
+            <li class="guanzhu">
+                <a href="###">关注<span class="sanjiao">▽</span></a>
+                <img class="guanzhuImg" src="../img/helpImg/wx-hs.jpg">
+            </li>
+            <li><a href="###">收藏</a></li>
+        </ul>
+    </div>    
+</div>
+<!--头部结束-->
+<!--头部下面图片-->
+<div class="reduce m w" id="reduce">
+    <img src="../img/helpImg/CgkeM1ZcbD6ABklrAACcrt-U1fw600.gif">
+    <a href="###" id="closeReduce">×</a>
+</div>
+<!--头部下面图片结束--> 
+<!--logo-->
+<div class="logo m w">
+    <h2 class="logoPic"><a><img src="../img/indexImg/logo.png"></a></h2>
+    <h3 class="movePic"><img src="../img/indexImg/move.gif"></h3>
+    <div class="searchBox">
+        <input id="search1" type="text" value="华歌尔">
+        <a href="###" id="search2">搜索</a>
+        <ul class="searchBox_Ul">
+            <li><a href="###">SYSTEM</a></li>
+            <li><a href="###">PUMA</a></li>
+            <li><a href="###">连衣裙</a></li>
+            <li><a href="###">接吻猫</a></li>
+            <li><a href="###">NIKE</a></li>
+            <li><a href="###">女士平</a></li>
+        </ul>
+   </div>
+   <div class="ewm">
+        <img src="../img/helpImg/CgkeMlUaPFWSf9uIAAAROERerXs989.jpg">
+        <p>手机端专享</p>
+        <a><span class="gb">×</span></a>
+        <p class="p1">随时随地</p>
+        <p class="p1">想购就购</p>
+        
+   </div>
+   <div class="shopCar">
+     <img src="../img/helpImg/b25d500ad9f74bb79d69b0b9058180fc.png">
+     <span>购物车</span>
+     <div class="shopCar_div">啥都没有！</div>
+   </div>
+</div>
+<!--logo结束-->
+<!--产品分类-->
+<div class="product m w">
+    <div class="erjimenu">
+        <p class="Allpro">全部商品分类</p>
+        <ul class="erji">
+           <li class="oli active1">
+              <a href="###"><img src="../img/indexImg/s1.png"></a>
+              <a href="###">名品</a>
+              <a href="###">包袋</a>
+              <a href="###">服装</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s2.png"></a>
+              <a href="###">女装</a>
+              <a href="###">连衣裙</a>
+              <a href="###">卫衣</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s3.png"></a>
+              <a href="###">男装</a>
+              <a href="###">衬衫</a>
+              <a href="###">T恤</a>
+              <a href="###">短裤</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s4.png"></a>
+              <a href="###">运动</a>
+              <a href="###">男运动服</a>
+              <a href="###">女运动服</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s5.png"></a>
+              <a href="###">鞋靴</a>
+              <a href="###">休闲鞋</a>
+              <a href="###">高跟鞋</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s6.png"></a>
+              <a href="###">箱包</a>
+              <a href="###">男包</a>
+              <a href="###">女包</a>
+              <a href="###">手提包</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s7.png"></a>
+              <a href="###">内衣</a>
+              <a href="###">文胸</a>
+              <a href="###">内裤</a>
+              <a href="###">睡衣</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s8.png"></a>
+              <a href="###">配饰</a>
+              <a href="###">钟表</a>
+              <a href="###">耳环</a>
+              <a href="###">戒指</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s9.png"></a>
+              <a href="###">婴童</a>
+              <a href="###">童鞋</a>
+              <a href="###">宝宝用品</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s10.png"></a>
+              <a href="###">家居</a>
+              <a href="###">家纺</a>
+              <a href="###">生活用品</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s11.png"></a>
+              <a href="###">美妆</a>
+              <a href="###">面膜</a>
+              <a href="###">洗护</a>
+              <a href="###">彩妆</a>
+           </li>
+        </ul>
+        <div class="sanji">
+           <div>111111111</div>
+           <div>2222222222</div>
+           <div>333333333333</div>
+           <div>4444444444444</div>
+           <div>55555555555</div>
+           <div>666666666666</div>
+           <div>777777777777</div>
+           <div>8888888888</div>
+           <div>9999999999</div>
+           <div>1010101010</div>
+           <div>121212121212</div>
+        </div>
+    </div>
+    <ul class="navList">
+        <li><a href="###" class="active">首页</a></li>
+        <li class="hotLi">
+            <a href="###">奢侈品</a>
+            <img class="hot" src="../img/indexImg/hot.gif">
+        </li>
+        <li><a href="###">奥莱男士</a></li>
+        <li><a href="###">奥莱女士</a></li>
+        <li><a href="###">运动户外</a></li>
+        <li><a href="###">美妆生活</a></li>
+        <li><a href="###">周末疯抢</a></li>
+        <li><a href="###"><img src="../img/indexImg/zhoumo.gif"></a></li>
+    </ul>
+</div> 
+<!--产品分类结束-->
+<!--个人中心-->
+<div class="person m w">
+    <p id="peson_P">您现在的位置: <a href="index.html">首页   >&nbsp;我的奥莱购</a>&nbsp;>&nbsp;<a href="changeAdd.html">&nbsp;收货地址簿</a></p>
+    <div class="main_person" id="main">
+        <div class="main_personLeft">
+            <dl>
+              <dd><a>个人中心</a></dd>
+              <dt class="dt1"><a href="index.html">我的奥莱购</a></dt>
+            </dl>
+            <dl>
+               <dd><a>我的交易</a></dd>
+               <dt class="dt2">
+                   <a href="###">我的订单</a>
+                   <a href="###">退换货服务</a>
+               </dt>
+            </dl>
+            <dl>
+               <dd><a>我的收藏</a></dd>
+               <dt class="dt3">
+                   <a href="">收藏的商品</a>
+               </dt>
+            </dl>
+            <dl>
+               <dd><a>我的账户</a></dd>
+               <dt class="dt4">
+                   <a href="###">我的优惠券</a>
+                   <a href="###">收货地址</a>
+                   <a href="###">个人资料</a>
+                   <a href="###">安全中心</a>
+               </dt>
+            </dl>
+        </div>
+        <!--右面--> 
+        <div class="right">
+        <p class="title">地址管理
+            <a class="blue addNewAdd">添加新地址</a>
+        </p>
+        <div class="info">
+            <div class="header">
+                <div class="name">收货人</div>
+                <div class="add">详细地址</div>
+                <div class="tel">电话/手机</div>
+                <div class="con">操作</div>
+            </div>
+            <div class="boder">
+                <div class="nothing">没有数据</div>
+                <div class="something">
+                    <div class="name">1</div>
+                    <div class="add">地球村</div>
+                    <div class="tel">11111111111</div>
+                    <div class="con">
+                        <a href="###" class="def">设为默认地址</a>
+                        <a href="###" class="del">删除</a>
+                        <span class="sp1">|</span>
+                        <a href="###" class="fix">修改</a>
+                    </div>
+                </div>
+                <div class="something">
+                    <div class="name">2</div>
+                    <div class="add">火星</div>
+                    <div class="tel">2222222</div>
+                    <div class="con">
+                        <a href="###" class="def">设为默认地址</a>
+                        <a href="###" class="del">删除</a>
+                        <span class="sp1">|</span>
+                        <a href="###" class="fix">修改</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>     
+</div>        
+</body>
+</html>

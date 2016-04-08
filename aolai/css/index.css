@@ -1,0 +1,163 @@
+.w{width:1000px}
+/*头部*/
+.outTop{width:100%;background:#EEEEEE;height:36px;line-height:34px;text-align:center;}
+.outTop .top{width:1200px; height:36px;}
+.topLeft li{float:left;height:36px;}
+.topLeft li a{font-size:12px; padding:0 7px;border-right:1px solid #000}
+.topRight li{float:left;}
+.topRight .guanzhu{ position:relative;}
+.guanzhuImg{ position:absolute; z-index:100; display:none;left:0;top:30px}
+.topRight li a{ font-size:12px;border-left:1px solid #000; padding:0 7px;}
+.My_al{ position:relative; z-index:100}
+.myal{ position:absolute;display:none;top:30px;left:0; background:#fff; border:1px solid #999; border-top:none}
+.topRight li .sanjiao:hover{transform: rotate(180deg)}
+.myal li a{ border:none}
+.topLeft li .zk{border:none; color:red}
+.topRight li a:hover{color:#E4393C}
+.topRight li .sanjiao{ font-size:12px; color:#000;}
+/*头部下面图片*/
+.reduce{height:80px;clear:both; position:relative; overflow:hidden}
+.reduce img{ display:block}
+.reduce #closeReduce{width:15px; height:15px; border-radius:10px; position:absolute;right:20px;top:10px; z-index:2;color:#FFF}
+/*logo部分*/
+.logo{height:92px; padding-top:18px;}
+.logoPic{ padding-left:10px;float:left; margin-right:10px}
+.movePic{float:left}
+.searchBox{float:left;margin-left:8px; margin-right:44px}
+.searchBox #search1{width:338px;height:30px;border:3px solid #D7181A;border-right:none;float:left;}
+.searchBox #search2{ display:block;width:50px; height:36px; background:#D7181A;float:left;color:#FFF; text-align:center; line-height:36px; }
+.searchBox_Ul li{ float:left; margin-right:8px;padding-top:10px}
+.searchBox_Ul li a{font-size:13px;color:#666; }
+.ewm{width:140px; height:64px; border:1px solid #666;float:left; position:relative}
+.ewm img{float:left; padding:3px 0 0 3px}
+.ewm p{font-size:12px; line-height:10px; text-align:center; padding-top:10px}
+.ewm .p1{color:red}
+.gb{ position:absolute;top:0; right:0; font-size:12px; border:1px solid #ccc}
+.logo .shopCar{width:140px; height:36px; border:1px solid #EEEEEE;float:right; line-height:36px}
+.logo .shopCar img{float:left; padding-top:5px; padding-right:10px}
+.shopCar_div{width:200px; height:60px; border:1px solid #ccc; position:relative;left:-60px; text-align:center; line-height:60px; display:none}
+/*产品分类*/
+.product{ height:42px; line-height:42px}
+.erjimenu{width:208px; height:42px; background:#F00; float:left; position:relative}
+.Allpro{ position:208px; height:42px; text-align:center;color:#fff}
+.erji{ position:absolute;top:42px; display:block;width:208px; z-index:9999 }
+.erji .active1{ background:red}
+.erji li{width:193px; height:36px; background:#E43B3D; padding-left:15px; line-height:36px}
+.erji li a{color:#fff; font-size:14px}
+.erji li img{ display:inline-block}
+.sanji{ position:absolute;left:208px; display:none; -overflow:hidden;height:462px; z-index:100}
+.sanji div{ border:1px solid red; background:#FFF}
+.navList{height:42px;line-height:42px; padding-left:30px; float:left}
+.navList li{float:left; margin-right:28px;}
+.navList li a{color:#000}
+.navList li .active{color:#D91C23}
+.navList li a:hover{color:#D91C23}
+.navList .hotLi{ position:relative}
+.navList .hot{ position:absolute;top:0;right:-15px}
+/*轮播图*/
+.outBanner{width:100%;height:400px; position:relative}
+.bg{width:100%;height:400px; overflow:hidden}
+.bg li{width:100%;height:400px;position:relative;}
+.bg1{ background:#1F1F1F}
+.bg2{ background:#230F54}
+.bg3{ background:#40D4D8}
+.bg4{ background:#EBE2D9}
+.bg5{ background:#6B7993}
+.bannerimg1{ position: absolute;left:200px}
+.bannerimg2{ position:absolute;right:20px}
+.nav{ position:absolute;left:800px; bottom:20px}
+.nav li{ width:20px; height:20px; background:#F00;float:left; margin-right:5px; text-align:center; line-height:20px; cursor:pointer; border-radius:20px}
+.nav .navactive{background:#CF0}
+/*楼梯效果*/
+.top{}
+#border1 img{ border:2px solid #fff}
+#border2 img{ border:2px solid #fff}
+#border3 img{ border:2px solid #fff}
+#border4 img{ border:2px solid #fff}
+#border4 img{ border:2px solid #fff}
+#border5 img{ border:2px solid #fff}
+#border6 img{ border:2px solid #fff}
+.louti_P{ height:70px; line-height:70px; font-size:20px; font-weight:700}
+.top li{float:left; margin-right:px}
+.brand{ clear:both}
+.brand li{float:left}
+.v_left{float:left}
+.v_right{float:left}
+.brandLi a img{border-right:1px solid #999; border-bottom:1px solid #999;}
+.brandLi a{display:block;width:130px; height:78px; border:1px solid #999}
+.qianggou{clear:both}
+.qianggou li{float:left}
+.wfgd{ clear:both;overflow:hidden;width:990px; position:relative}
+#button{ position:absolute}
+.toumingdu li{width:330px; height:330px; }
+.toumingdu p{ padding-left:20px; height:50px; font-size:12px; color:#666; line-height:50px}
+.toumingdu h5{ padding-left:20px}
+.toumingdu .span1{color:#F69; font-size:20px; margin-right:40px}
+.toumingdu .span2{text-decoration:line-through;color:#666}
+.mingpg{clear:both}
+.nanshi,.nvshi,.sport,.xb,.life,.love{clear:both}
+table{ width:660px; border-left:1px solid #eee; border-top:1px solid #eee; float:left}
+table td{ overflow:hidden; width:168px; height:72px; border-right:1px solid #eee; border-bottom:1px solid #eee; text-align:center;}
+td img{ width:80px; height:30px; display:inline-block}
+td .img2{ display:none}
+#border7 a{position:relative}
+#border7 img{}
+#love_div{width:485px; height:195px; background:#CF0; display:none; position:absolute}
+/*最近的购物中心*/
+.center{ clear:both}
+.center_P{ height:70px; line-height:70px; font-size:20px; font-weight:600;color:#666}
+/*悬浮*/
+#xf{width:80px; height:600px; position:fixed;left:20px;top:10px; display:none; z-index:1000}
+#xf li{width:80px; height:60px; border:1px solid #ccc; border-bottom:none}
+#xf li.li1{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat 0 0}
+#xf li.li2{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat 0 -60px}
+#xf li.li3{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat 0 -120px}
+#xf li.li4{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat 0 -180px}
+#xf li.li5{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat 0 -240px}
+#xf li.li6{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat 0 -300px}
+#xf .li7{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat 0 -360px}
+#xf .li8{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat 0 -420px}
+#xf .li9{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat 0 -480px}
+#xf .li10{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat 0 -540px}
+#xf li.active1{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat -80px 0}
+#xf li.active2{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat -80px -60px}
+#xf li.active3{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat -80px -120px}
+#xf li.active4{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat -80px -180px}
+#xf li.active5{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat -80px -240px}
+#xf li.active6{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat -80px -300px}
+#xf li.active7{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat -80px -360px}
+#xf li.active8{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat -80px -420px}
+#xf li.active9{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat -80px -480px}
+#xf li.active10{ background:url(../img/indexImg/CgkeMlW_PnGyfTZMAABTmsCGY14422.png) no-repeat -80px -540px}
+/*产品分类*/
+.product{ height:42px; line-height:42px}
+.erjimenu1{width:208px; height:42px; float:left;overflow:-hidden; position:relative; z-index:100}
+.Allpro1{width:208px; height:42px; text-align:center;color:#fff; background:#F00;}
+.erji1{ position:absolute;top:42px; display:block;width:208px }
+.erji1 .active1{ background:red}
+.erji1 li{width:193px; height:42px; background:#E43B3D; padding-left:15px}
+.erji1 li a{color:#fff; font-size:14px}
+.erji1 li img{ display:inline-block}
+.sanji1{ position:absolute;left:208px; display:none; overflow:hidden;width:302px; height:482px;}
+.sanji1 div{width:300px; height:480px; border:1px solid red; background:#FFF}
+.navList{height:42px;line-height:42px; padding-left:30px; float:left}
+.navList li{float:left; margin-right:28px;}
+.navList li a{color:#000}
+.navList li .active{color:#D91C23}
+.navList li a:hover{color:#D91C23}
+.navList .hotLi{ position:relative}
+.navList .hot{ position:absolute;top:0;right:-15px}
+/*&&&&&&&&&&吸顶广告&&&&&&&&&&&&*/
+#xd{width:100%; height:50px; background:#CCC; position:fixed;top:0;left:0; z-index:100;display:none }
+.xd_content{width:1000px; margin:0 auto; height:50px;line-height:50px}
+.xd_search{width:410px; height:34px; background:#fff; float:left; border:5px solid #F00; margin-left:100px; margin-top:5px}
+#ts{float:right; margin-right:100px;width:120px; text-align:center}
+#ts_ul{display:none;width:120px; background:#FFF; text-align:center;}
+#ts_ul li{ height:30px; line-height:30px; }
+
+
+.a_div{width:130px; height:78px; text-align:center; line-height:78px; font-size:20px}
+
+
+.bepi{ position:fixed; display:none;right:0;top:10px; z-index:1000}
+#return{ position:fixed;right:0;bottom:0}

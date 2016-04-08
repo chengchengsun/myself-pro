@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+.w{width:1200px}
+#main{ width:1200px; margin:0 auto;}
+#main .left{ width:200px; float:left; padding-top:25px;}
+#main .left .list{ width:182px; border-top:1px solid #ddd; margin-bottom:10px;}
+#main .left .list .fst{ border:1px solid #ddd; border-top:0; width:172px; padding-left:8px; height:38px; line-height:38px; font-weight:bold; color:#333;}
+#main .left .list ul{ display:none; width:172px; padding-left:8px; border:1px solid #ddd; border-top:0;}
+#main .left .list ul li a{ line-height:26px; color:#333; padding-left:18px; }
+#main .left .list .ul1 li a{ padding-left:0; background:none;}
+#main .left .list ul span{ -display:none; line-height:26px; color:#666; display:block;}
+#main .left .list ul span.red{ color:#c80a28; padding-left:8px;}
+
+
+
+
+#main .right{ float:left; width:990px;}
+#main .right .address{ height:65px; line-height:65px;}
+#main .right .address span{ padding:0 10px;}
+#main .right .control{ width:998px; height:30px; border:1px solid #ddd; margin-bottom:10px;}
+#main .right .control div{ float:left; width:80px; height:30px; line-height:30px; text-align:center; border-right:1px solid #ddd;}
+#main .right .control div .rank{ display:inline-block; width:8px; height:10px; background:url(../img/imgList/images/ctjt_07.gif) center no-repeat;}
+#main .right .control div.number{ margin-right:40px;}
+#main .right .control input{ width:39px; height:20px; border:1px solid #ddd; color:#ddd;}
+#main .right .control span{ line-height:30px;}
+#main .right .control .ckb{ margin-left:20px;}
+#main .right .control .all{ padding-right:15px;}
+#main .right .control .pageCho{ display:inline-block; width:13px; height:13px; border:1px solid #ddd; margin:7px 5px; line-height:12px;}
+#main .right .control .price{ cursor:pointer;}
+#main .right .control .number{ cursor:pointer;}
+
+#main .right .info{ width:1000px;}
+#main .right .info .container{position:relative; width:1000px; height:380px; }
+#main .right .info .good{position:absolute; background:#fff; margin-right:13px; width:236px; padding:1px;float:left; border:1px solid #ddd;}
+#main .right .info .good4{ margin-right:0; }
+#main .right .info .tz{cursor:pointer}
+#main .right .info .good .top{position:relative; width:222px; height:315px; overflow:hidden; padding:8px 7px 0 7px;}
+#main .right .info .good .top .bimg{ width:222px; height:222px; margin-bottom:5px;}
+#main .right .info .good .top .simg{ width:30px; height:30px;}
+#main .right .info .good .top .smallImg{ width:30px; height:30px; border:1px solid #ddd; padding:1px;}
+#main .right .info .good .top span{ line-height:30px;}
+#main .right .info .good .top .now{ font-size:16px; color:#c80a28;}
+#main .right .info .good .top .then{ font-size:10px; color:#999; text-decoration:line-through; padding-left:5px;}
+#main .right .info .good .top p{ color:#333; line-height:18px;}
+#main .right .info .good .bot{ width:236px; height:48px;}
+#main .right .info .good .bot .ldiv{ border-right:1px solid #ddd;}
+#main .right .info .good .bot div{ width:117px; height:37px; padding-top:10px; border-top:1px solid #ddd; float:left; text-align:center;}
+#main .right .info .good .bot div .sp1{ font-weight:bold; display:block; width:40px; height:10px; text-align:center; margin:0 auto 5px;}
+#main .right .info .good .bot div .sp2{ color:#999;}
+#main .right .info .good .bot div .red{ color:#b57c5b;}
+#main .right .info .good .bot div .blue{ color:#38b;}
+
+#main .right .info .page{ width:550px; height:37px; margin:37px auto 50px;}
+#main .right .info .page a{ display:block; float:left; padding:0 12px;height:35px; border:1px solid #ddd; line-height:35px; font-size:12px; color:#565656; margin-right:16px;}
+#main .right .info .page a.gray{ background:#eee;}
+#main .right .info .page span{ color:#999; font-size:14px; line-height:37px; float:left; margin-left:-5px;}

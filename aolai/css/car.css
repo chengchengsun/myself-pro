@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+.w{width:1200px}
+.logo .right{ float:left; height:75px; padding-top:15px; width:700px;}
+.logo .right em{ width:700px; height:32px; display:block; background:url(../img/car/cart_img.png) -15px -89px; margin-left:20px}
+
+
+
+.goodList{ width:1198px; border:1px solid #ddd; margin:0 auto 12px;}
+.goodList .title{ height:36px; width:1198px; background:url(../img/imgCar/cartbar2.png) -110px;}
+.goodList .title div{ height:36px; text-align:center; line-height:36px; float:left;}
+.goodList .title .t1{ width:382px;}
+.goodList .title .t2{ width:132px;}
+.goodList .title .t3{ width:132px;}
+.goodList .title .t4{ width:122px;}
+.goodList .title .t5{ width:134px;}
+.goodList .title .t6{ width:184px;}
+.goodList .pinpai{ height:40px; line-height:40px; padding-left:20px; width:1978px;}
+.goodList ul{ padding-bottom:20px; background:#fcfcfc; width:1198px; border-bottom:1px solid #ddd;}
+.goodList ul li{ height:124px; padding-top:10px; border-bottom:1px solid #eaeaea; width:1086px;}
+.goodList ul li .t1{ padding-left:10px; float:left; width:372px; height:114px; background:url(../img/imgCar/shopping_car_bg.png) right center no-repeat;}
+.goodList ul li .t2{ text-align:center; padding-top:34px; float:left; width:132px; height:80px; background:url(../img/imgCar/shopping_car_bg.png) right center no-repeat;}
+.goodList ul li .t3{ text-align:center; padding-top:44px; float:left; width:132px; height:70px; background:url(../img/imgCar/shopping_car_bg.png) right center no-repeat;}
+.goodList ul li .t4{color:#bf0000; text-align:center; padding-top:50px; float:left; width:122px; height:64px; background:url(../img/imgCar/shopping_car_bg.png) right center no-repeat;}
+.goodList ul li .t5{ text-align:center; padding-top:40px; float:left; width:134px; height:74px; background:url(../img/imgCar/shopping_car_bg.png) right center no-repeat;}
+.goodList ul li .t6{ text-align:center; padding-top:14px; float:left; width:184px; height:100px;}
+.goodList ul li a:hover{ color:#c80a28;}
+.goodList ul li .t1 img{ float:left; width:112px; height:112px; border:1px solid #ddd;}
+.goodList ul li .t1 .txt{ float:left; width:242px; padding-left:10px; height:84px; padding-top:30px;}
+.goodList ul li .t1 .txt a{ display:block; color:#565656; line-height:16px; font-size:13px; margin-bottom:10px;}
+.goodList ul li .t1 .txt a:hover{ color:#c80a28;}
+.goodList ul li .t1 .txt span{ margin-right:25px;}
+.goodList ul li .t2 p{ text-decoration:line-through; color:#999; font-size:10px; line-height:30px;}
+.goodList ul li .t3 a{ display:inline-block; width:12px; height:12px; border:1px solid #ddd; text-align:center; line-height:10px; margin-right:6px;}
+.goodList ul li .t3 input{ margin-right:6px; width:36px; height:20px; text-align:center; line-height:20px; border:1px solid #ddd;}
+.goodList ul li .t5 a{ display:block; line-height:16px;}
+.goodList ul li .t6 .red{ color:#c80a28;}
+.goodList .bj{ height:63px; padding-top:10px; width:1198px; border-bottom:1px solid #ddd; text-align:right;}
+.goodList .bj span{ line-height:30px;}
+.goodList .bj .num{ color:#ff0032;}
+.goodList .bj .sp1{ margin-right:25px;} 
+.goodList .bj .sp2{ width:85px; display:inline-block; padding-right:10px;}
+.goodList .bj .sp3{ font-weight:bold;}
+.goodList .aj{ background:#fdfdfd; height:45px; width:1198px; line-height:45px; text-align:right;}
+.goodList .aj .sp3{ color:#c60000; font-size:16px;padding-left:35px; padding-right:10px;}
+.goodList .aj span{ font-size:14px; }
+
+
+.goShop{ height:55px; border:1px solid #DDDDDD; background:#EEEEEF; padding-top:25px; padding-left:40px; width:1160px }
+#goto{width:250px; height:36px; border:1px solid #D1D1D1; background:#FFF; float:left;margin-right:400px; text-align:center; line-height:36px; font-size:16px}
+#account{width:250px; height:36px;  background:#F66666; float:left; text-align:center; line-height:36px; font-size:16px; }
+#account a{color:#fff}

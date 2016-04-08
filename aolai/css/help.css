@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+.w{width:1200px}
+/*头部*/
+.outTop{width:100%;background:#EEEEEE;height:36px;line-height:34px;text-align:center;}
+.outTop .top{width:1200px; height:36px;}
+.topLeft li{float:left;height:36px;}
+.topLeft li a{font-size:12px; padding:0 7px;border-right:1px solid #000}
+.topRight li{float:left;}
+.topRight .guanzhu{ position:relative;}
+.guanzhuImg{ position:absolute; z-index:100; display:none;left:0;top:30px}
+.topRight li a{ font-size:12px;border-left:1px solid #000; padding:0 7px;}
+.My_al{ position:relative; z-index:100}
+.myal{ position:absolute;display:none;top:30px;left:0; background:#fff; border:1px solid #999; border-top:none}
+.topRight li .sanjiao:hover{transform: rotate(180deg)}
+.myal li a{ border:none}
+.topLeft li .zk{border:none; color:red}
+.topRight li a:hover{color:#E4393C}
+.topRight li .sanjiao{ font-size:12px; color:#000;}
+/*头部下面图片*/
+.reduce{height:80px;clear:both; position:relative; overflow:hidden}
+.reduce img{ display:block}
+.reduce #closeReduce{width:15px; height:15px; border-radius:10px; position:absolute;right:20px;top:10px; z-index:2;color:#FFF}
+/*logo部分*/
+.logo{height:92px; padding-top:18px;}
+.logoPic{ padding-left:10px;float:left; margin-right:10px}
+.movePic{float:left}
+.searchBox{float:left;margin-left:8px; margin-right:44px}
+.searchBox #search1{width:338px;height:30px;border:3px solid #D7181A;border-right:none;float:left;}
+.searchBox #search2{ display:block;width:50px; height:36px; background:#D7181A;float:left;color:#FFF; text-align:center; line-height:36px; }
+.searchBox_Ul li{ float:left; margin-right:8px;padding-top:10px}
+.searchBox_Ul li a{font-size:13px;color:#666; }
+.ewm{width:140px; height:64px; border:1px solid #666;float:left; position:relative}
+.ewm img{float:left; padding:3px 0 0 3px}
+.ewm p{font-size:12px; line-height:10px; text-align:center; padding-top:10px}
+.ewm .p1{color:red}
+.gb{ position:absolute;top:0; right:0; font-size:12px; border:1px solid #ccc}
+.logo .shopCar{width:140px; height:36px; border:1px solid #EEEEEE;float:right; line-height:36px}
+.logo .shopCar img{float:left; padding-top:5px; padding-right:10px}
+.shopCar_div{width:200px; height:60px; border:1px solid #ccc; position:relative;left:-60px; text-align:center; line-height:60px; display:none}
+/*产品分类*/
+.product{ height:42px; line-height:42px}
+.erjimenu{width:208px; height:42px; background:#F00; float:left;overflow:-hidden; position:relative}
+.Allpro{ position:208px; height:42px; text-align:center;color:#fff}
+.erji{ position:absolute;top:42px; display:none;width:208px }
+.erji .active1{ background:red}
+.erji li{width:193px; height:42px; background:#E43B3D; padding-left:15px}
+.erji li a{color:#fff; font-size:14px}
+.erji li img{ display:inline-block}
+.sanji{ position:absolute;left:208px; display:none; overflow:hidden;width:302px; height:482px;}
+.sanji div{width:300px; height:480px; border:1px solid red; background:#FFF}
+.navList{height:42px;line-height:42px; padding-left:30px; float:left}
+.navList li{float:left; margin-right:28px;}
+.navList li a{color:#000}
+.navList li .active{color:#D91C23}
+.navList li a:hover{color:#D91C23}
+.navList .hotLi{ position:relative}
+.navList .hot{ position:absolute;top:0;right:-15px}
+/*帮助中心*/
+.help{ padding-left:100px}
+.helpLeft{float:left; margin-right:25px}
+.help p{ font-size:14px; height:19px;margin-bottom:5px; padding-left:50px; padding-top:15px}
+.help p img{ display:inline-block;width:16px; height:16px}
+.wordLeft{width:206px; height:684px; border:1px solid #ddd;padding-left:3px}
+.wordLeft li{ height:24px; border-bottom:1px solid #ddd; line-height:24px; font-size:12px; text-align:center; width:200px; }
+.helpRight{width:760px; height:1020px; border:1px solid #ddd; border-top:2px solid #F4A50A;float:left;}
+.helpRight p{height:30px; border-bottom:1px solid #ddd; padding-left:30px; font-weight:600}

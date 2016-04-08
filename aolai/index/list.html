@@ -1,0 +1,527 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>列表页</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/list.css" />
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/list.js"></script>
+    <script src="../js/cookie.js"></script>
+</head>
+
+<body>
+<!--头部-->
+<div class="outTop">
+  <div class="top m w">
+        <ul class="topLeft l">
+            <li><a>华南城旗下零售电商平台</a></li>
+            <li><a href="###">华盛outlets</a></li>
+            <li><a class="zk">真正工厂直销的折扣网站</a></li>
+        </ul>
+        <ul class="topRight r">
+            <li id="getContent"></li>
+            <li><a href="index.html">退出</a></li>
+            <li>
+                <a href="###">手机奥莱购</a>
+            </li>
+            <li class="My_al">
+                <a href="###">我的奥莱<span class="sanjiao">▽</span></a>
+                <ul class="myal">
+                   <li><a href="orderForm.html">我的订单</a></li>
+                   <li><a href="collect.html">我的收藏</a></li>
+                   <li><a href="car.html">购物车</a></li>
+                </ul>
+            </li>
+            <li><a href="###">帮助中心</a></li>
+            <li class="guanzhu">
+                <a href="###">关注<span class="sanjiao">▽</span></a>
+                <img class="guanzhuImg" src="../img/helpImg/wx-hs.jpg">
+            </li>
+            <li><a href="###">收藏</a></li>
+        </ul>
+    </div>    
+</div>
+<!--头部下面图片-->
+<div class="reduce m w" id="reduce">
+    <img src="../img/helpImg/CgkeM1ZcbD6ABklrAACcrt-U1fw600.gif">
+    <a href="###" id="closeReduce">×</a>
+</div>
+<!--头部下面图片结束--> 
+<!--logo-->
+<div class="logo m w">
+    <h2 class="logoPic"><a href="index.html"><img src="../img/indexImg/logo.png"></a></h2>
+    <h3 class="movePic"><img src="../img/indexImg/move.gif"></h3>
+    <div class="searchBox">
+        <input id="search1" type="text" value="华歌尔">
+        <a href="###" id="search2">搜索</a>
+        <ul class="searchBox_Ul">
+            <li><a href="###">SYSTEM</a></li>
+            <li><a href="###">PUMA</a></li>
+            <li><a href="###">连衣裙</a></li>
+            <li><a href="###">接吻猫</a></li>
+            <li><a href="###">NIKE</a></li>
+            <li><a href="###">女士平</a></li>
+        </ul>
+   </div>
+   <div class="ewm">
+        <img src="../img/helpImg/CgkeMlUaPFWSf9uIAAAROERerXs989.jpg">
+        <p>手机端专享</p>
+        <a><span class="gb">×</span></a>
+        <p class="p1">随时随地</p>
+        <p class="p1">想购就购</p>
+        
+   </div>
+   <div class="shopCar">
+     <img src="../img/helpImg/b25d500ad9f74bb79d69b0b9058180fc.png">
+     <span>购物车</span>
+     <div class="shopCar_div">啥都没有！</div>
+   </div>
+</div>
+<!--logo结束-->
+<!--产品分类-->
+<div class="product m w">
+    <div class="erjimenu">
+        <p class="Allpro">全部商品分类</p>
+        <ul class="erji">
+           <li class="oli active1">
+              <a href="###"><img src="../img/indexImg/s1.png"></a>
+              <a href="###">名品</a>
+              <a href="###">包袋</a>
+              <a href="###">服装</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s2.png"></a>
+              <a href="###">女装</a>
+              <a href="###">连衣裙</a>
+              <a href="###">卫衣</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s3.png"></a>
+              <a href="###">男装</a>
+              <a href="###">衬衫</a>
+              <a href="###">T恤</a>
+              <a href="###">短裤</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s4.png"></a>
+              <a href="###">运动</a>
+              <a href="###">男运动服</a>
+              <a href="###">女运动服</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s5.png"></a>
+              <a href="###">鞋靴</a>
+              <a href="###">休闲鞋</a>
+              <a href="###">高跟鞋</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s6.png"></a>
+              <a href="###">箱包</a>
+              <a href="###">男包</a>
+              <a href="###">女包</a>
+              <a href="###">手提包</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s7.png"></a>
+              <a href="###">内衣</a>
+              <a href="###">文胸</a>
+              <a href="###">内裤</a>
+              <a href="###">睡衣</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s8.png"></a>
+              <a href="###">配饰</a>
+              <a href="###">钟表</a>
+              <a href="###">耳环</a>
+              <a href="###">戒指</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s9.png"></a>
+              <a href="###">婴童</a>
+              <a href="###">童鞋</a>
+              <a href="###">宝宝用品</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s10.png"></a>
+              <a href="###">家居</a>
+              <a href="###">家纺</a>
+              <a href="###">生活用品</a>
+           </li>
+           <li class="oli">
+              <a href="###"><img src="../img/indexImg/s11.png"></a>
+              <a href="###">美妆</a>
+              <a href="###">面膜</a>
+              <a href="###">洗护</a>
+              <a href="###">彩妆</a>
+           </li>
+        </ul>
+        <div class="sanji">
+           <div>111111111</div>
+           <div>2222222222</div>
+           <div>333333333333</div>
+           <div>4444444444444</div>
+           <div>55555555555</div>
+           <div>666666666666</div>
+           <div>777777777777</div>
+           <div>8888888888</div>
+           <div>9999999999</div>
+           <div>1010101010</div>
+           <div>121212121212</div>
+        </div>
+    </div>
+    <ul class="navList">
+        <li><a href="###" class="active">首页</a></li>
+        <li class="hotLi">
+            <a href="###">奢侈品</a>
+            <img class="hot" src="../img/indexImg/hot.gif">
+        </li>
+        <li><a href="###">奥莱男士</a></li>
+        <li><a href="###">奥莱女士</a></li>
+        <li><a href="###">运动户外</a></li>
+        <li><a href="###">美妆生活</a></li>
+        <li><a href="###">周末疯抢</a></li>
+        <li><a href="###"><img src="../img/indexImg/zhoumo.gif"></a></li>
+    </ul>
+</div> 
+<!--产品分类结束-->
+<!--main-->
+<div id="main">
+    <div class="left">
+        <div class="list">
+            <div class="fst">每日新品</div>
+            <ul class="ul1">
+                <li><a href="###">20151103</a></li>
+                <li><a href="###">20151030</a></li>
+                <li><a href="###">20151027</a></li>
+                <li><a href="###">20151023</a></li>
+                <li><a href="###">20151020</a></li>
+                <li><a href="###">20151016</a></li>
+            </ul>   
+            <div class="fst active">女装</div>
+            <ul style="display:block;">
+                <li><a href="###" style="background:url(../img/imgList/images/left_11.gif) left center no-repeat;">上装</a></li>
+                <span class="red">T恤(346)</span>
+                <span>衬衫(86)</span>
+                <span>毛针织衫(390)</span>
+                <span>套装(81)</span>
+                <span>卫衣/绒衫(267)</span>
+                <span>蕾丝衫/雪纺衫(19)</span>
+                <span>风衣(4)</span>
+                <span>棉衣/棉服(115)</span>
+                <span>毛呢外套(132)</span>
+                <span>羽绒服(173)</span>
+                <span>短外套(50)</span>
+                <span>西装(3)</span>
+                <span>马夹(3)</span>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+                <li><a href="###">配饰</a></li>
+                <li><a href="###">箱包</a></li>
+                <li><a href="###">鞋子</a></li>
+            </ul>
+            <div class="fst">SONEED女装</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">饰品</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">AMH男装</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裤装</a></li>
+                <li><a href="###">鞋包配饰</a></li>
+            </ul>
+            <div class="fst">MiniZaru童装</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+                <li><a href="###">鞋包配饰</a></li>
+            </ul>
+            <div class="fst">nanaday娜娜日记</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">Forqueens范奎恩</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">Dequanna迪葵纳</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">niBBuns尼班诗</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">R•Maker暗码</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">Cherry town樱桃小镇</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">Laura's promise劳拉</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+                <li><a href="###">配饰</a></li>
+            </ul>
+            <div class="fst">SOULINE素缕</div>
+            <ul>
+                <li><a href="###">鞋包配饰</a></li>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">zigu自古</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">Garbha果芽</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">HoneyPig蜜糖猪</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">白鹿语</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">基易</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">哲初</div>
+            <ul>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">池希</div>
+            <ul>
+                <li><a href="###">围巾/披肩</a></li>
+                <li><a href="###">上装</a></li>
+                <li><a href="###">裙装</a></li>
+                <li><a href="###">裤装</a></li>
+            </ul>
+            <div class="fst">歩乐斯</div>
+            <ul>
+                <li><a href="###">运动鞋</a></li>
+            </ul>
+            <div class="fst">猫猫包袋</div>
+            <ul>
+                <li><a href="###">钱包</a></li>
+                <li><a href="###">单肩包</a></li>
+                <li><a href="###">斜挎包</a></li>
+                <li><a href="###">双肩包</a></li>
+                <li><a href="###">手提包</a></li>
+                <li><a href="###">手拿包</a></li>
+                <li><a href="###">旅行箱</a></li>
+            </ul>
+        </div>
+      </div>
+      <!--右边--->
+      <div class="right">
+        <div class="address">
+            <a href="###">您所在的位置</a><span> > </span>
+            <a href="index.html">奥莱购</a><span> > </span>
+            <a href="###">女装</a><span> > </span>
+            <a href="###">上装</a><span> > </span>
+            <a href="###">T恤</a>
+        </div>
+        <div class="control">
+            <div class="natral">默认排序</div>
+            <div class="time">上架时间<span class="uod"></span></div>
+            <div class="price" title="点击按降序排列">价格<span class="rank"></span></div>
+            <div class="number" title="点击按降序排列">销量<span class="rank"></span></div>
+            <input class="ipt1" type="text" value="￥"/><span class="sp_sp">-</span><input class="ipt2" type="text" value="￥"/>
+            <input class="ckb" type="checkbox"/><span>折扣商品</span>
+            <input class="ckb" type="checkbox"/><span>包邮</span>
+            <span class="FR pageCho"> > </span>
+            <span class="FR pageCho"> < </span>
+            <span class="FR">1/20</span>
+            <span class="FR all">总计783个商品</span>
+        </div>
+        <div class="info">
+        <div class="container">
+            <div class="good">
+                <div class="top">
+                    <img class="bimg" src="../img/imgList/1445844571444833196.jpg" />
+                    <div class="smallImg"><img class="simg" src="../img/imgList/1445844571444833196.jpg"/></div>
+                    <span class="now">¥208</span><span class="then">¥418.00</span>
+                    <p>女装藏蓝色青年时尚韩版字母印花宽松长袖T恤GW5165【2015新品】</p>
+                </div>
+                <div class="bot">
+                    <div class="ldiv">
+                        <span class="sp1 red">7</span>
+                        <span class="sp2">月销量</span>
+                    </div>
+                    <div>
+                        <span class="sp1 blue">0</span>
+                        <span class="sp2">累计评价</span>
+                    </div>
+                </div>
+            </div>
+            <div class="good">
+                <div class="top">
+                    <img class="bimg" src="../img/imgList/1445491123766924699.jpg" />
+                    <div class="smallImg"><img class="simg" src="../img/imgList/1445491123766924699.jpg" /></div>
+                    <span class="now">¥228</span><span class="then">¥468.00</span>
+                    <p>女装灰色青年韩版格子拼接印花长袖T恤范德萨发生GW5159</p>
+                </div>
+                <div class="bot">
+                    <div class="ldiv">
+                        <span class="sp1 red">10</span>
+                        <span class="sp2">月销量</span>
+                    </div>
+                    <div>
+                        <span class="sp1 blue">0</span>
+                        <span class="sp2">累计评价</span>
+                    </div>
+                </div>
+            </div>
+            <div class="good">
+                <div class="top">
+                    <img class="bimg" src="../img/imgList/1444628770383615880.jpg" />
+                    <div class="smallImg"><img class="simg" src="../img/imgList/1444628770383615880.jpg" /></div>
+                    <span class="now">¥158</span><span class="then">¥288.00</span>
+                    <p>女装青年蓝色韩版时尚圆领宽松拼接长袖发生的规定T恤JM5032</p>
+                </div>
+                <div class="bot">
+                    <div class="ldiv">
+                        <span class="sp1 red">16</span>
+                        <span class="sp2">月销量</span>
+                    </div>
+                    <div>
+                        <span class="sp1 blue">1</span>
+                        <span class="sp2">累计评价</span>
+                    </div>
+                </div>
+            </div>
+            <div class="good good4">
+                <div class="top">
+                    <img class="bimg" src="../img/imgList/1032718_thumb_G_1443509839813.jpg" />
+                    <div class="smallImg"><img class="simg" src="../img/imgList/1032718_thumb_G_1443509839813.jpg" /></div>
+                    <span class="now">¥218</span><span class="then">¥438.00</span>
+                    <p>女装粉色青年时尚印花荷叶边圆领T恤LZ4609</p>
+                </div>
+                <div class="bot">
+                    <div class="ldiv">
+                        <span class="sp1 red">9</span>
+                        <span class="sp2">月销量</span>
+                    </div>
+                    <div>
+                        <span class="sp1 blue">0</span>
+                        <span class="sp2">累计评价</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="good">
+                <div class="top">
+                    <img class="bimg" src="../img/imgList/1032624_thumb_G_1443230694461.jpg" />
+                    <div class="smallImg"><img class="simg" src="../img/imgList/1032624_thumb_G_1443230694461.jpg" /></div>
+                    <span class="now">¥218</span><span class="then">¥654.00</span>
+                    <p>女装韩版时尚青年两色圆领套头印花宽松显瘦长袖T恤PC5085</p>
+                </div>
+                <div class="bot">
+                    <div class="ldiv">
+                        <span class="sp1 red">22</span>
+                        <span class="sp2">月销量</span>
+                    </div>
+                    <div>
+                        <span class="sp1 blue">15</span>
+                        <span class="sp2">累计评价</span>
+                    </div>
+                </div>
+            </div>
+            <div class="good">
+                <div class="top">
+                    <img class="bimg" src="../img/imgList/1032547_thumb_G_1443081675660.jpg" />
+                    <div class="smallImg"><img class="simg" src="../img/imgList/1032547_thumb_G_1443081675660.jpg" /></div>
+                    <span class="now">¥198</span><span class="then">¥418.00</span>
+                    <p>女装韩版时尚青年红色宽松显瘦拼接圆领长袖常规内搭T恤JN5304</p>
+                </div>
+                <div class="bot">
+                    <div class="ldiv">
+                        <span class="sp1 red">28</span>
+                        <span class="sp2">月销量</span>
+                    </div>
+                    <div>
+                        <span class="sp1 blue">68</span>
+                        <span class="sp2">累计评价</span>
+                    </div>
+                </div>
+            </div>
+            <div class="good">
+                <div class="top">
+                    <img class="bimg" src="../img/imgList/1032513_thumb_G_1443077688523.jpg" />
+                    <div class="smallImg"><img class="simg" src="../img/imgList/1032513_thumb_G_1443077688523.jpg" /></div>
+                    <span class="now">¥218</span><span class="then">¥468.00</span>
+                    <p>女装白色青年时尚圆领印花宽松显瘦长袖T恤IG5377</p>
+                </div>
+                <div class="bot">
+                    <div class="ldiv">
+                        <span class="sp1 red">15</span>
+                        <span class="sp2">月销量</span>
+                    </div>
+                    <div>
+                        <span class="sp1 blue">72</span>
+                        <span class="sp2">累计评价</span>
+                    </div>
+                </div>
+            </div>
+            <div class="good good4">
+                <div class="top">
+                    <img class="bimg " src="../img/imgList/1032403_thumb_G_1443061464659.jpg" />
+                    <div class="smallImg tz"><img class="simg" src="../img/imgList/1032403_thumb_G_1443061464659.jpg" /></div>
+                    <span class="now">¥198</span><span class="then">¥398.00</span>
+                    <p>女装白色韩版时尚青年圆领卡通图案长袖T恤LZ5006201</p>
+                </div>
+                <div class="bot">
+                    <div class="ldiv">
+                        <span class="sp1 red">9</span>
+                        <span class="sp2">月销量</span>
+                    </div>
+                    <div>
+                        <span class="sp1 blue">154</span>
+                        <span class="sp2">累计评价</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>   
+</div>    
+</body>
+</html>
